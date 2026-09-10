@@ -1,0 +1,634 @@
+{
+  "meta": {
+    "siteName": "Dr. Sameh Qassem",
+    "titleSuffix": "Dr. Sameh Qassem | Consultant Neurosurgeon & Spine Surgeon"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Doctor",
+    "services": "Patient Services",
+    "reviews": "Patient Reviews",
+    "videos": "Videos",
+    "articles": "Articles",
+    "contact": "Contact Us",
+    "bookNow": "Book Now",
+    "bookNowShort": "Book Your Appointment",
+    "menu": "Menu",
+    "langSwitch": "Switch Language"
+  },
+  "common": {
+    "readMore": "Read Full Article",
+    "viewAll": "View All",
+    "minutesRead": "min read",
+    "contactUs": "Contact Us",
+    "whatsapp": "Chat on WhatsApp",
+    "callNow": "Call Now",
+    "hotline": "Direct Hotline",
+    "instantWhatsapp": "Instant WhatsApp Consultation",
+    "sendReports": "Send Scans & Reports",
+    "consultAboutCase": "Consult About Your Case",
+    "learnMore": "Learn More",
+    "watchVideo": "Play Video",
+    "channels": "Dr. Sameh Qassem's channels:"
+  },
+  "heroPanel": {
+    "hotlineLabel": "Direct Hotline",
+    "whatsappLabel": "Instant WhatsApp Consultation",
+    "whatsappSub": "Send Scans & Reports"
+  },
+  "footer": {
+    "bio": "Over 15 years of experience in minimally invasive microsurgery, brain tumor resection, and skull base endoscopy, delivered with precision that rivals leading medical institutions in Europe.",
+    "membership": "Member of the Egyptian and European Association of Neurosurgical Societies (EANS)",
+    "quickLinks": "Quick Links",
+    "patientGuides": "Patient Guides",
+    "guideLinks": [
+      { "label": "Advanced Surgeries", "href": "/services" },
+      { "label": "Conservative Treatments", "href": "/services" },
+      { "label": "Book a Consultation", "href": "/contact" },
+      { "label": "Prevention & Recovery Tips", "href": "/articles" },
+      { "label": "Accepted Health Insurance", "href": "/contact" }
+    ],
+    "branches": "Branches & Working Hours",
+    "branch1Label": "Branch One:",
+    "branch1": "New Cairo, Medical Park Premier",
+    "branch2Label": "Branch Two:",
+    "branch2": "Mohandessin, Arab League Street, Giza",
+    "hoursLabel": "Clinic Hours:",
+    "hours": "Saturday to Wednesday (3:00 PM - 9:00 PM)",
+    "emailLabel": "Email:",
+    "phoneLabel": "Direct Line:",
+    "copyright": "© {year} Dr. Sameh Qassem. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Medical Terms & Conditions",
+    "sitemap": "Sitemap",
+    "disclaimer": "The medical content shown is for educational purposes only and does not replace a direct consultation with a qualified physician."
+  },
+  "finalCta": {
+    "titleLine1": "Start Your Recovery Journey Today with Expert",
+    "titleHighlight": "Dr. Sameh Qassem",
+    "subtitle": "Get an accurate diagnosis and a comprehensive evaluation of your condition, backed by the highest standards of safety and medical care. Our team is available around the clock to answer your questions and arrange your appointment."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "",
+      "title": "Advanced, Precise Care for",
+      "titleHighlight": "Brain, Nerve & Spine Conditions",
+      "subtitle": "With <strong>Dr. Sameh Qassem</strong>, Consultant Neurosurgeon & Spine Surgeon. We deliver the highest standards of interventional microsurgery and minimally invasive care, powered by state-of-the-art 3D navigation systems and internationally recognized success rates.",
+      "primaryCta": "Book Your Appointment",
+      "secondaryCta": "Explore Our Services",
+      "image": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2400&auto=format&fit=crop"
+    },
+    "stats": [
+      { "icon": "clock", "value": 15, "suffix": "+", "label": "Years of Surgical Experience" },
+      { "icon": "activity", "value": 5000, "suffix": "+", "label": "Successful Surgeries" },
+      { "icon": "building", "value": 20, "suffix": "+", "label": "Accredited Hospitals & Centers" },
+      { "icon": "smile", "value": 12000, "suffix": "+", "label": "Patients Regained Mobility" }
+    ],
+    "about": {
+      "eyebrow": "About the Surgeon",
+      "title": "An Unwavering Commitment to Excellence in",
+      "titleHighlight": "Neurosurgery & Spine Surgery",
+      "text": "<strong>Dr. Sameh Qassem</strong> is a leading specialist in microscopic skull base surgery and complex brain and spinal tumor operations. His approach combines exceptional surgical precision with the latest minimally invasive techniques to speed recovery and minimize complications.",
+      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1600&auto=format&fit=crop",
+      "bullets": [
+        {
+          "title": "Consultant & Fellow of the Royal College of Surgeons",
+          "text": "Holds an international fellowship in microsurgery and minimally invasive spinal fixation."
+        },
+        {
+          "title": "Pioneer in Skull Base Endoscopy & Pituitary Tumor Resection",
+          "text": "Uses advanced endonasal endoscopy with no external incision, fully preserving vital functions."
+        },
+        {
+          "title": "A Humane Approach to Comprehensive Care",
+          "text": "Clear, simplified explanations for patients and families, with a personalized treatment plan and continuous follow-up."
+        }
+      ],
+      "cta": "Learn More About Doctor"
+    },
+    "surgeriesSection": {
+      "eyebrow": "Our Specialties",
+      "title": "Comprehensive Neurosurgical Care",
+      "text": "Precision surgeries with globally leading success rates, powered by electronic microscopes and 3D surgical navigation.",
+      "cta": "View All Advanced Surgeries",
+      "items": [
+        {
+          "icon": "brain",
+          "title": "Microscopic Brain Tumor Surgery",
+          "text": "Resection of benign and malignant brain tumors with extreme precision under neuronavigation and real-time neuromonitoring to fully protect speech and motor centers.",
+          "tags": ["3D Neuronavigation", "Awake & Intraoperative Nerve Monitoring"]
+        },
+        {
+          "icon": "spine",
+          "title": "Minimally Invasive Spine Surgery",
+          "text": "Lumbar and cervical disc removal and neural canal decompression through incisions of just a few centimeters, reducing pain and speeding the return to work within days.",
+          "tags": ["Minimal Incision, Minimal Bleeding", "Same-Day or 24-Hour Discharge"]
+        },
+        {
+          "icon": "skull",
+          "title": "Advanced Skull Base Endoscopy",
+          "text": "Modern techniques for resecting pituitary and skull base tumors via endonasal endoscopy without opening the skull, fully preserving vision and cranial nerves.",
+          "tags": ["No Visible Facial or Head Incisions", "Highest Optic Nerve Protection Rates"]
+        },
+        {
+          "icon": "waves",
+          "title": "Cerebrovascular Surgery",
+          "text": "Treatment of aneurysms and arteriovenous malformations via interventional catheterization.",
+          "tags": ["Cerebral Aneurysms", "Arteriovenous Malformations (AVM)"]
+        },
+        {
+          "icon": "zap",
+          "title": "Epilepsy & Nerve Pain Treatment",
+          "text": "Surgical and non-surgical solutions for refractory epilepsy and chronic nerve pain.",
+          "tags": ["Drug-Resistant Epilepsy", "Trigeminal Neuralgia"]
+        },
+        {
+          "icon": "network",
+          "title": "Nerve & Spinal Cord Injuries",
+          "text": "Surgical rehabilitation for peripheral nerve injuries and traumatic spine fractures.",
+          "tags": ["Acute Spinal Cord Injuries", "Peripheral Nerve Injuries"]
+        }
+      ]
+    },
+    "treatmentsSection": {
+      "eyebrow": "Integrated, Non-Surgical Care",
+      "title": "Specialized Medical Treatments",
+      "text": "We follow a stepped treatment plan, starting with conservative solutions and limited interventions such as radiofrequency and nerve root injections before considering surgery.",
+      "cta": "Explore All Treatment Plans & Specialties",
+      "items": [
+        {
+          "title": "Cervical & Lumbar Disc Herniation Treatment",
+          "text": "Image-guided nerve root injection sessions and non-surgical treatment of vertebral inflammation for suitable cases, restoring natural movement balance.",
+          "note": "Indications: Sciatica pain, limb numbness, difficulty walking long distances."
+        },
+        {
+          "title": "Brain Aneurysm & Vascular Malformation Treatment",
+          "text": "Interventional cerebral catheterization, stenting and coiling to prevent brain hemorrhage and sudden strokes with exceptional precision.",
+          "note": "Indications: Sudden severe headache, arteriovenous malformations (AVM)."
+        },
+        {
+          "title": "Trigeminal Neuralgia & Refractory Epilepsy Treatment",
+          "text": "Precise radiofrequency or microsurgical decompression of the trigeminal nerve, and vagus nerve stimulator implantation for epilepsy patients.",
+          "note": "Indications: Electric-shock-like facial pain, seizures unresponsive to medication."
+        }
+      ]
+    },
+    "testimonialsSection": {
+      "eyebrow": "Real Experiences",
+      "title": "Patient Stories From Around the World",
+      "text": "Testimonials we're proud of from patients who regained the gift of movement and their normal lives through precise, dedicated care.",
+      "cta": "View All Patient Reviews"
+    },
+    "videosSection": {
+      "eyebrow": "Neurological Education & Awareness",
+      "title": "Video Library & Medical Education",
+      "text": "Detailed video explanations from Dr. Sameh Qassem covering common neurological conditions, prevention strategies, and common myths.",
+      "cta": "Visit Our Full Video Library on YouTube"
+    },
+    "articlesSection": {
+      "eyebrow": "Latest Articles & Insights",
+      "title": "Medical Articles & Patient Education",
+      "text": "Reliable, easy-to-understand medical information from Dr. Sameh Qassem to help you make sound health decisions.",
+      "cta": "Browse All Medical Articles"
+    },
+    "faqSection": {
+      "eyebrow": "Frequently Asked Questions",
+      "title": "Everything You Need to Know Before Your Visit",
+      "text": "Clear answers to the most common questions from our patients about surgeries, consultations, and medical insurance.",
+      "items": [
+        {
+          "q": "Is microscopic brain and nerve surgery completely safe?",
+          "a": "Yes, thanks to 3D neuronavigation and real-time neuromonitoring, safety rates are significantly higher and complications are minimized compared to traditional surgery."
+        },
+        {
+          "q": "How long is the recovery after endoscopic spine surgery?",
+          "a": "In most cases, patients can walk the same day and return to desk work within one to two weeks, while strenuous physical activity requires 4-6 weeks."
+        },
+        {
+          "q": "Is surgery required immediately after a disc herniation diagnosis?",
+          "a": "Not necessarily. We follow a gradual approach starting with conservative treatment and image-guided injections, resorting to surgery only when conservative treatment fails or progressive neurological weakness appears."
+        },
+        {
+          "q": "Do you work with health insurance companies?",
+          "a": "Yes, we work with most locally and internationally accredited health insurance providers, and our reception team can help verify your policy coverage before your appointment."
+        },
+        {
+          "q": "Can patients outside Egypt get a remote consultation?",
+          "a": "Absolutely. We offer initial video consultations to review scans and medical reports before planning your travel and treatment schedule."
+        },
+        {
+          "q": "What documents and tests are needed before the first visit?",
+          "a": "We recommend bringing all previous scans (MRI or CT) along with medical reports and relevant lab results for an accurate assessment during your first consultation."
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Dr.",
+      "titleHighlight": "Sameh Qassem",
+      "subtitle": "Over 15 years dedicated to neurosurgery and spine surgery, building trust with thousands of patients around the world.",
+      "primaryCta": "Book Your Consultation",
+      "secondaryCta": "Watch Career Highlights",
+      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2400&auto=format&fit=crop"
+    },
+    "doctorMessage": {
+      "badgeLabel": "A Word from the Doctor",
+      "headline": "My message to every patient who trusts us: healing is a journey that begins with reassurance and precision, and is completed with humanity",
+      "paragraphs": [
+        "I believe the success of a surgery is measured not only by the surgeon's precision, but by the reassurance we give the patient and their family at every step of the treatment journey.",
+        "For over 15 years, I've focused on combining exceptional surgical precision with the latest minimally invasive techniques, to shorten recovery time and spare my patients any unnecessary complications."
+      ],
+      "name": "Dr. Sameh Qassem",
+      "role": "Consultant Neurosurgeon & Spine Surgeon",
+      "signature": "Dr. Sameh Qassem",
+      "qualificationShort": "FRCS (London)",
+      "qualificationFull": "Fellowship of the Royal College of Surgeons",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1600&auto=format&fit=crop"
+    },
+    "timelineSection": {
+      "eyebrow": "Academic & Professional Journey",
+      "title": "A Career of Excellence and Continuous Growth",
+      "items": [
+        { "year": "2008", "title": "MBBCh, Bachelor of Medicine & Surgery", "text": "Graduated with honors from Kasr Al Ainy Faculty of Medicine, Cairo University." },
+        { "year": "2012", "title": "Master's Degree in Neurosurgery", "text": "Earned his Master's degree following specialized research in skull base surgery." },
+        { "year": "2015", "title": "MRCS - Royal College of Surgeons Fellowship", "text": "International fellowship from the United Kingdom in general and specialized surgery." },
+        { "year": "2017", "title": "MD (Doctorate) in Neurosurgery", "text": "Doctoral thesis on minimally invasive microscopic spine surgery." },
+        { "year": "2019", "title": "Advanced Fellowship Training - Germany", "text": "Advanced training in skull base endoscopy and pituitary tumor resection." },
+        { "year": "2023", "title": "Senior Consultant & International Conference Speaker", "text": "Delivered lectures at the European Association of Neurosurgical Societies (EANS) conferences." }
+      ]
+    },
+    "videoSection": {
+      "eyebrow": "Featured Interview",
+      "title": "Discover Dr. Sameh Qassem's Approach to Treatment",
+      "text": "An extended interview in which the doctor explains his vision for patient care and the key technological advances he has introduced into the operating room.",
+      "poster": "https://images.unsplash.com/photo-1551190822-a9333d879b1f?q=80&w=2400&auto=format&fit=crop",
+      "duration": "07:12 min"
+    },
+    "expertiseSection": {
+      "eyebrow": "Areas of Expertise",
+      "title": "Deep Expertise Across Precise Specialties",
+      "items": [
+        { "title": "Brain & Nerve Tumor Surgery", "text": "Precise resection of benign and malignant tumors using neuronavigation." },
+        { "title": "Minimally Invasive Spine Surgery", "text": "Modern techniques that reduce pain and post-operative recovery time." },
+        { "title": "Skull Base & Pituitary Endoscopy", "text": "Interventions without traditional open surgery via endonasal endoscopy." },
+        { "title": "Epilepsy & Chronic Nerve Pain Treatment", "text": "Advanced surgical and non-surgical solutions for refractory neuropathic pain." }
+      ]
+    },
+    "certificatesSection": {
+      "eyebrow": "Certifications & Memberships",
+      "title": "International Accreditation & Distinguished Scientific Memberships",
+      "items": [
+        { "title": "Fellowship of the Royal College of Surgeons", "org": "United Kingdom" },
+        { "title": "Membership, European Association of Neurosurgical Societies", "org": "EANS" },
+        { "title": "MD in Neurosurgery", "org": "Cairo University" },
+        { "title": "Advanced Microsurgery Certification", "org": "Germany" },
+        { "title": "Membership, Egyptian Society of Neurological Surgeons", "org": "Egypt" },
+        { "title": "Neuronavigation Systems Training Certificate", "org": "United States" }
+      ]
+    },
+    "counters": [
+      { "icon": "clock", "value": 15, "suffix": "+", "label": "Years of Experience" },
+      { "icon": "activity", "value": 5000, "suffix": "+", "label": "Successful Surgeries" },
+      { "icon": "award", "value": 12, "suffix": "", "label": "International Certifications" },
+      { "icon": "globe", "value": 9, "suffix": "", "label": "Countries Patients Travel From" }
+    ]
+  },
+  "services": {
+    "hero": {
+      "title": "Patient",
+      "titleHighlight": "Services",
+      "subtitle": "A complete system of precise diagnostics, conservative treatments, and advanced surgeries, tailored around every patient's needs.",
+      "primaryCta": "Book Your Consultation",
+      "secondaryCta": "Browse Specialties",
+      "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2400&auto=format&fit=crop"
+    },
+    "disciplinesSection": {
+      "eyebrow": "Core Disciplines",
+      "title": "A Comprehensive Care System for Every Condition",
+      "items": [
+        {
+          "icon": "brain",
+          "title": "Brain & Nerve Tumor Surgery",
+          "text": "Diagnosis and treatment of brain and spinal cord tumors using state-of-the-art neuronavigation.",
+          "conditions": ["Benign & malignant brain tumors", "Spinal cord tumors", "Brain cysts & congenital malformations"]
+        },
+        {
+          "icon": "spine",
+          "title": "Spine Surgery",
+          "text": "Comprehensive treatment for neck and back pain through minimally invasive intervention and spinal fixation.",
+          "conditions": ["Lumbar & cervical disc herniation", "Spinal canal stenosis", "Spondylolisthesis & instability"]
+        },
+        {
+          "icon": "skull",
+          "title": "Endoscopic Skull Base Surgery",
+          "text": "Resection of pituitary and skull base tumors without traditional open surgery.",
+          "conditions": ["Pituitary tumors", "Acoustic neuromas", "Cerebrospinal fluid leaks"]
+        },
+        {
+          "icon": "waves",
+          "title": "Cerebrovascular Surgery",
+          "text": "Treatment of aneurysms and arteriovenous malformations via interventional catheterization.",
+          "conditions": ["Cerebral aneurysms", "Arteriovenous malformations (AVM)", "Hemorrhagic strokes"]
+        },
+        {
+          "icon": "zap",
+          "title": "Epilepsy & Nerve Pain Treatment",
+          "text": "Surgical and non-surgical solutions for refractory epilepsy and chronic nerve pain.",
+          "conditions": ["Drug-resistant epilepsy", "Trigeminal neuralgia", "Involuntary spasms"]
+        },
+        {
+          "icon": "network",
+          "title": "Nerve & Spinal Cord Injuries",
+          "text": "Surgical rehabilitation for peripheral nerve injuries and traumatic spine fractures.",
+          "conditions": ["Acute spinal cord injuries", "Peripheral nerve injuries", "Traumatic vertebral fractures"]
+        }
+      ]
+    },
+    "workflowSection": {
+      "eyebrow": "Our Methodology",
+      "title": "Diagnostic & Treatment Workflow",
+      "steps": [
+        { "title": "Initial Consultation", "text": "Reviewing your medical history and a thorough clinical exam to pinpoint your symptoms." },
+        { "title": "Diagnostic Imaging", "text": "Ordering the necessary scans (MRI, CT) and analyzing them with extreme precision." },
+        { "title": "Personalized Treatment Plan", "text": "Building a stepped treatment plan starting with the least invasive option for your case." },
+        { "title": "Medical or Surgical Procedure", "text": "Executing the treatment plan with the latest techniques and the highest safety standards." },
+        { "title": "Follow-Up & Rehabilitation", "text": "Ongoing personalized follow-up to ensure the best long-term recovery outcomes." }
+      ]
+    },
+    "faqSection": {
+      "eyebrow": "Service FAQs",
+      "title": "Most Common Patient Questions",
+      "items": [
+        { "q": "What's the difference between open surgery and minimally invasive surgery?", "a": "Minimally invasive surgery relies on very small incisions and precise endoscopes, reducing pain, bleeding, and hospital stay compared to traditional open surgery." },
+        { "q": "Do all disc herniation cases require surgery?", "a": "No, most cases respond to conservative treatment and physiotherapy; surgery is reserved for cases with neurological weakness or failed conservative treatment." },
+        { "q": "How long does it take to get imaging results and a diagnosis?", "a": "Scans are typically reviewed and an initial diagnosis is made during the same first consultation session." },
+        { "q": "Are there safe anesthesia options for elderly patients?", "a": "Yes, every case is assessed by a specialized anesthesia team to select the safest protocol based on age and overall health." },
+        { "q": "Can I get a second opinion?", "a": "Absolutely, we welcome reviewing reports and scans of previously diagnosed cases to provide an independent medical opinion." },
+        { "q": "What is the post-surgery follow-up process?", "a": "We set a clear schedule for follow-up appointments, checkups, and physiotherapy sessions if needed, to ensure the best possible recovery." },
+        { "q": "Is emergency service available around the clock?", "a": "Yes, a hotline for neurological emergencies is available 24/7." },
+        { "q": "Can I get a detailed medical report in English?", "a": "Yes, we provide all medical reports and correspondence in both Arabic and English to facilitate communication with insurance companies or overseas treatment centers." }
+      ]
+    }
+  },
+  "reviews": {
+    "hero": {
+      "title": "Patient",
+      "titleHighlight": "Reviews",
+      "subtitle": "Real stories from patients who regained their normal lives through precise, compassionate medical care.",
+      "primaryCta": "Book Your Consultation",
+      "secondaryCta": "See All Reviews",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2400&auto=format&fit=crop"
+    },
+    "filters": ["All", "Brain Surgery", "Spine", "Skull Base", "Vascular"],
+    "items": [
+      { "name": "Ahmed Mahmoud", "location": "Cairo, Egypt", "procedure": "Endoscopic Lumbar Discectomy", "category": "Spine", "rating": 5, "text": "I suffered from a severe lumbar disc herniation that kept me off work for 6 months. After minimally invasive endoscopic surgery with Dr. Sameh Qassem, the pain disappeared completely on the day of surgery and I returned to work in just two weeks!" },
+      { "name": "Fatima Al-Otaibi", "location": "Riyadh, Saudi Arabia", "procedure": "Skull Base Endoscopy", "category": "Skull Base", "rating": 5, "text": "I traveled from Riyadh specifically for Dr. Sameh Qassem to remove a pituitary tumor through the nose. His professionalism, precision, and thorough explanation of every detail put us completely at ease. The surgery was 100% successful." },
+      { "name": "Omar Al-Hashimi", "location": "Dubai, UAE", "procedure": "Canal Decompression & Spinal Fixation", "category": "Spine", "rating": 5, "text": "An exceptional, kind, and attentive doctor. My father suffered from severe spinal canal stenosis and difficulty walking. Dr. Sameh Qassem performed minimally invasive spinal fixation, and now he walks daily without any pain." },
+      { "name": "Mona Al-Sharif", "location": "Alexandria, Egypt", "procedure": "Microscopic Brain Tumor Resection", "category": "Brain Surgery", "rating": 5, "text": "The shock of a brain tumor diagnosis was overwhelming, but Dr. Sameh's confidence and detailed explanation of every step gave us hope. Thankfully the surgery was completely successful with no complications." },
+      { "name": "Khalid Al-Nuaimi", "location": "Doha, Qatar", "procedure": "Aneurysm Treatment", "category": "Vascular", "rating": 5, "text": "Discovering an arterial aneurysm was terrifying, but Dr. Sameh's team handled it with remarkable speed and precision through interventional catheterization. I'm grateful to everyone who contributed to this exceptional care." },
+      { "name": "Sara Youssef", "location": "Jeddah, Saudi Arabia", "procedure": "Trigeminal Neuralgia Treatment", "category": "Brain Surgery", "rating": 5, "text": "I suffered from trigeminal nerve pain for years without an accurate diagnosis. Dr. Sameh quickly diagnosed the condition and set a treatment plan that ended my suffering completely. I'm grateful to him and his wonderful medical team." },
+      { "name": "Youssef Abdullah", "location": "Manama, Bahrain", "procedure": "Cervical Discectomy", "category": "Spine", "rating": 5, "text": "The pain in my neck kept me from sleeping for months. After surgery with Dr. Sameh Qassem, I got my peaceful sleep and normal life back. I highly recommend him to anyone facing similar issues." },
+      { "name": "Layla Murad", "location": "Kuwait City, Kuwait", "procedure": "Pituitary Tumor Resection", "category": "Skull Base", "rating": 5, "text": "The diagnostic precision and quality of post-operative follow-up were outstanding. The nursing and reception team were also extremely kind and professional throughout treatment." },
+      { "name": "Mohammed Al-Zahrani", "location": "Medina, Saudi Arabia", "procedure": "Lumbar Spinal Fixation", "category": "Spine", "rating": 5, "text": "After years of chronic pain due to spinal instability, I had the surgery with Dr. Sameh and the result was far better than I expected. May God reward him abundantly." }
+    ]
+  },
+  "videosPage": {
+    "hero": {
+      "title": "Video",
+      "titleHighlight": "Library",
+      "subtitle": "Short, direct video explanations from Dr. Sameh Qassem on the most common neurological and spinal conditions.",
+      "primaryCta": "Book Your Consultation",
+      "secondaryCta": "Follow Us on YouTube",
+      "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2400&auto=format&fit=crop"
+    },
+    "items": [
+      { "category": "Spine", "title": "When Is Disc Herniation Surgery Urgent and Necessary?", "duration": "04:15" },
+      { "category": "Brain Surgery", "title": "The Latest Endoscopic Techniques for Pituitary Tumor Removal", "duration": "06:30" },
+      { "category": "Rehabilitation", "title": "Essential Guidelines for Healthy Sitting & Sleeping After Spine Surgery", "duration": "05:20" },
+      { "category": "Vascular", "title": "How We Detect Aneurysms Before Rupture Occurs", "duration": "03:47" },
+      { "category": "Skull Base", "title": "Endonasal Endoscopy: A Safe Alternative to Traditional Skull Opening", "duration": "05:58" },
+      { "category": "Epilepsy & Nerve Pain", "title": "Treating Trigeminal Neuralgia Without Open Surgery", "duration": "04:32" },
+      { "category": "Spine", "title": "5 Warning Signs of Back Pain You Should Never Ignore", "duration": "03:12" },
+      { "category": "General Awareness", "title": "The Difference Between an Ordinary Headache and a Dangerous One", "duration": "04:50" },
+      { "category": "Rehabilitation", "title": "Simple Exercises to Strengthen Your Back and Prevent Injury", "duration": "06:05" }
+    ]
+  },
+  "articlesPage": {
+    "hero": {
+      "title": "Medical",
+      "titleHighlight": "Articles",
+      "subtitle": "Accurate, reliable medical content explaining the latest scientific developments in neurosurgery and spine surgery.",
+      "primaryCta": "Book Your Consultation",
+      "secondaryCta": "Browse Articles",
+      "image": "https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=2400&auto=format&fit=crop"
+    },
+    "featured": {
+      "date": "October 20, 2024",
+      "readTime": "8 min read",
+      "category": "Brain Surgery",
+      "title": "The Neuronavigation Revolution: How Technology Transformed the Future of Brain Tumor Surgery",
+      "text": "An in-depth look at how 3D surgical navigation systems and intraoperative imaging raise safety and precision rates in resecting complex brain tumors, with real case studies from the operating room.",
+      "image": "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?q=80&w=2400&auto=format&fit=crop"
+    },
+    "items": [
+      { "date": "October 12, 2024", "readTime": "5 min read", "category": "General Awareness", "title": "When Should You See a Neurosurgeon Without Delay?", "text": "Critical warning signs such as sudden limb numbness, escalating headaches with blurred vision, or disturbed balance and coordination." },
+      { "date": "September 28, 2024", "readTime": "4 min read", "category": "Brain Surgery", "title": "What's New in Brain Tumor Treatment: Neuronavigation & Limited Intervention", "text": "How CT imaging and 3D navigation systems during surgery raise safety rates and enable near-complete tumor resection." },
+      { "date": "September 15, 2024", "readTime": "6 min read", "category": "Spine", "title": "Effective Ways to Prevent Lower Back Pain for Office Workers", "text": "Simple stretching exercises and evidence-based sitting postures to protect the lumbar and sacral spine from chronic pressure and disc herniation." },
+      { "date": "September 02, 2024", "readTime": "5 min read", "category": "Skull Base", "title": "Pituitary Tumors: Symptoms You Should Never Ignore", "text": "From chronic headaches to vision and hormonal disturbances, learn the early signs and endoscopic treatment options." },
+      { "date": "August 20, 2024", "readTime": "4 min read", "category": "Vascular", "title": "Cerebral Aneurysms: Can They Be Treated Before They Rupture?", "text": "The importance of early screening for at-risk individuals and modern interventional catheterization treatment options." },
+      { "date": "August 05, 2024", "readTime": "6 min read", "category": "Epilepsy", "title": "Refractory Epilepsy: When Is Surgery the Best Option?", "text": "Modern treatment options for drug-resistant epilepsy patients that go beyond traditional medication." }
+    ]
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "titleHighlight": "Us",
+      "subtitle": "Our medical team is ready to answer your questions and help you book your appointment quickly and easily.",
+      "primaryCta": "Call Us Now",
+      "secondaryCta": "Message Us on WhatsApp",
+      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2400&auto=format&fit=crop"
+    },
+    "form": {
+      "eyebrow": "Book Your Consultation",
+      "title": "Medical Consultation Booking Form",
+      "text": "Enter your details and case information, and we'll open a direct WhatsApp chat with our reception team to confirm your appointment.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "e.g. John Smith",
+      "phoneLabel": "Phone / WhatsApp Number",
+      "phonePlaceholder": "+1 234 567 8900",
+      "serviceLabel": "Requested Service",
+      "servicePlaceholder": "Select consultation type",
+      "services": ["Brain Tumor Surgery", "Spine Surgery", "Skull Base Endoscopy", "Vascular Treatment", "Epilepsy & Nerve Pain Treatment", "General Consultation / Second Opinion"],
+      "clinicLabel": "Preferred Clinic",
+      "messageLabel": "Case Details (Optional)",
+      "messagePlaceholder": "Briefly describe your symptoms or inquiry...",
+      "submit": "Send & Open WhatsApp",
+      "submitting": "Sending...",
+      "success": "Your request has been sent successfully! You'll be redirected to WhatsApp to complete the booking.",
+      "error": "Something went wrong while sending. Please try again or contact us directly.",
+      "required": "This field is required",
+      "whatsappTemplate": "Hello, I would like to book a medical consultation.\nName: {name}\nPhone: {phone}\nService: {service}\nClinic: {clinic}\nCase Details: {message}"
+    },
+    "info": {
+      "eyebrow": "Contact Information",
+      "title": "Dr. Sameh Qassem's Clinics",
+      "subtitle": "We're here to answer your questions and help every step of the way — reach out through the form or visit our clinic directly.",
+      "phoneLabel": "Direct Line",
+      "emailLabel": "Email",
+      "hoursLabel": "Working Hours",
+      "directionsLabel": "Get Directions",
+      "emergencyLabel": "Neurological Emergency Hotline",
+      "emergencyNote": "Available 24/7 for urgent cases",
+      "mapLabel": "Location on Map"
+    },
+    "faq": {
+      "eyebrow": "Frequently Asked Questions",
+      "title": "Booking & Contact Questions",
+      "items": [
+        {
+          "q": "How can I book an emergency consultation?",
+          "a": "You can call our hotline or reach us on WhatsApp 24/7, and we'll coordinate the earliest possible appointment based on your case."
+        },
+        {
+          "q": "What are the clinic's working hours?",
+          "a": "The clinic sees patients Saturday through Wednesday, from 3:00 PM to 9:00 PM."
+        },
+        {
+          "q": "Is an initial consultation available via WhatsApp?",
+          "a": "Yes, you can send your question, reports, or scans over WhatsApp for an initial assessment before scheduling an in-person visit."
+        },
+        {
+          "q": "What payment methods are accepted?",
+          "a": "We accept cash and credit cards at the clinic, and we also work with most accredited health insurance providers."
+        },
+        {
+          "q": "Can I reschedule or cancel my appointment?",
+          "a": "Absolutely — just reach out by phone or WhatsApp with enough notice, and we'll help you reschedule to a time that works for you."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "We Are Here to Help You Recover",
+      "text": "Our team is ready around the clock to answer your medical questions and help you choose the right next step for your care."
+    }
+  },
+  "privacyPolicy": {
+    "hero": {
+      "eyebrow": "Legal & Privacy",
+      "title": "Privacy",
+      "titleHighlight": "Policy",
+      "subtitle": "How Dr. Sameh Qassem's clinic collects, uses, and protects your personal and medical information.",
+      "lastUpdated": "Last updated: September 10, 2026"
+    },
+    "sections": [
+      {
+        "icon": "clipboardList",
+        "title": "Collection of Patient Data",
+        "text": "When you submit a booking request, contact us via WhatsApp, or fill out a form on this website, we may collect the following information to prepare for your consultation:",
+        "list": [
+          "Full name and preferred contact number",
+          "Details of your medical history, symptoms, or condition that you choose to share",
+          "Medical reports, scans, or images you upload or send for review",
+          "Appointment preferences and clinic location"
+        ]
+      },
+      {
+        "icon": "shieldCheck",
+        "title": "Data Confidentiality & Protection",
+        "text": "All patient information is treated as strictly confidential in line with standard medical privacy practice. We do not sell, rent, or share your personal or medical data with any third party for marketing purposes.",
+        "list": [
+          "Access to your records is limited to the doctor and authorized clinical staff directly involved in your care",
+          "Medical files and communications are stored securely and kept only for as long as necessary to provide follow-up care",
+          "Data is shared with an external party only when required by law or with your explicit consent, such as a referral to another specialist"
+        ]
+      },
+      {
+        "icon": "messageCircle",
+        "title": "Direct WhatsApp Communication & Consultation Usage",
+        "text": "WhatsApp is offered as a convenient channel for initial questions, sending medical reports for review, and appointment coordination.",
+        "list": [
+          "Messages and files sent over WhatsApp are used solely to assess your case and respond to your inquiry",
+          "An initial WhatsApp exchange does not replace an in-person medical examination or a documented consultation",
+          "Please avoid sharing sensitive financial information, such as full card numbers, over WhatsApp"
+        ]
+      },
+      {
+        "icon": "cookie",
+        "title": "Cookies & Website Analytics",
+        "text": "This website uses cookies and similar technologies to remember your language preference and understand how visitors use our pages, so we can keep improving the experience.",
+        "list": [
+          "Essential cookies keep the site functioning correctly, such as remembering your Arabic or English language choice",
+          "Analytics cookies provide anonymized statistics on page visits and do not identify you personally",
+          "You can disable cookies at any time from your browser settings; some features may then work less smoothly"
+        ]
+      },
+      {
+        "icon": "userCog",
+        "title": "Patient Rights to Update or Delete Records",
+        "text": "You have the right to review, correct, or request deletion of the personal information you have shared with us.",
+        "list": [
+          "Contact us by phone or email to request a copy of the data we hold about you",
+          "Ask us to correct any inaccurate personal details at any time",
+          "Request deletion of your contact and booking information, subject to any medical record-keeping obligations we are legally required to honor"
+        ]
+      }
+    ],
+    "contactNote": "For any question about this policy or your personal data, please reach out to us.",
+    "contactCta": "Contact the clinic"
+  },
+  "terms": {
+    "hero": {
+      "eyebrow": "Legal & Compliance",
+      "title": "Medical Terms",
+      "titleHighlight": "& Conditions",
+      "subtitle": "Please read these terms carefully before booking an appointment or using this website.",
+      "lastUpdated": "Last updated: September 10, 2026"
+    },
+    "sections": [
+      {
+        "icon": "siren",
+        "title": "Emergency Disclaimer",
+        "text": "This website and its booking forms are intended for scheduling consultations and are NOT a channel for critical or life-threatening medical emergencies.",
+        "list": [
+          "If you are experiencing a medical emergency, such as a sudden severe headache, loss of consciousness, seizures, or major trauma, call emergency services or go to the nearest emergency room immediately",
+          "Do not rely on WhatsApp messages, contact forms, or booking requests for urgent situations — these are reviewed during clinic hours and are not monitored as an emergency line",
+          "For urgent neurological concerns during clinic hours, you may also reach the clinic directly by phone"
+        ]
+      },
+      {
+        "icon": "bookOpen",
+        "title": "Educational Purpose of Website Content",
+        "text": "The articles, videos, and general information published on this website are provided for medical awareness and patient education only.",
+        "list": [
+          "Content on this site does not constitute a diagnosis, medical advice, or a treatment plan for any individual case",
+          "Every patient's condition is different — a direct clinical examination by the doctor is required before any diagnosis or treatment decision",
+          "Do not delay seeking in-person medical care based solely on information read on this website"
+        ]
+      },
+      {
+        "icon": "calendarCheck",
+        "title": "Appointment Booking & Cancellation Policy",
+        "text": "To ensure fair access to appointment slots for all patients, please note the following booking terms:",
+        "list": [
+          "Appointments booked through the website or WhatsApp are confirmed only after coordination with our clinic staff",
+          "We kindly request at least 24 hours' notice to reschedule or cancel an appointment",
+          "Repeated no-shows without notice may affect the ability to book future appointments",
+          "Please arrive with any relevant prior medical reports, scans, or imaging to make the most of your consultation time"
+        ]
+      },
+      {
+        "icon": "copyright",
+        "title": "Intellectual Property Rights",
+        "text": "All content published on this website is the intellectual property of Dr. Sameh Qassem's clinic and may not be copied or reused without written permission.",
+        "list": [
+          "This includes the doctor's professional credentials, biography, and photographs",
+          "Surgical and clinical media, illustrations, and educational videos featured on the site",
+          "The website's custom design, layout, and visual identity"
+        ]
+      }
+    ],
+    "contactNote": "For any question about these terms, please reach out to us.",
+    "contactCta": "Contact the clinic"
+  }
+}

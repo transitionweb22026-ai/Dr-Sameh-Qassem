@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-cairo: var(--font-cairo);
+  --font-tajawal: var(--font-tajawal);
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --color-brand-50: #f0f7f4;
+  --color-brand-100: #dceee7;
+  --color-brand-200: #bbded0;
+  --color-brand-300: #8ec4b2;
+  --color-brand-400: #5da591;
+  --color-brand-500: #3e8874;
+  --color-brand-600: #2f6d5d;
+  --color-brand-700: #27574b;
+  --color-brand-800: #22463e;
+  --color-brand-900: #1d3b34;
+  --color-brand-950: #0a231d;
+  --color-brand-forest: #0a2a22;
+  --color-brand-deep: #071f19;
+  --color-brand-gold: #c5a059;
+  --color-brand-goldLight: #e4c88f;
+  --color-brand-ivory: #fbf9f4;
+  --color-brand-ivorySoft: #f4efe6;
+
+  --shadow-luxury: 0 20px 45px -15px rgba(10, 42, 34, 0.08),
+    0 0 1px 1px rgba(10, 42, 34, 0.04);
+  --shadow-emerald-glow: 0 10px 30px -10px rgba(19, 78, 64, 0.4);
+  --shadow-liquid-hover: 0 20px 50px rgba(12, 51, 40, 0.18);
+  --shadow-gold-glow: 0 20px 45px -12px rgba(197, 160, 89, 0.35);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(1.55);
+      opacity: 0;
+    }
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-brand-ivory);
+  color: #1a2723;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #0d3b30;
+  color: #ffffff;
+}
+
+/* ---------- 3D Liquid Glassmorphism Core Primitives ---------- */
+.liquid-glass {
+  /* Layered background: a diagonal glossy shine sits on top of the
+     translucent fill, giving a realistic glass-surface reflection
+     without needing an extra pseudo-element or stacking-context work. */
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.08) 45%, rgba(255, 255, 255, 0) 70%),
+    rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 20px 50px -10px rgba(10, 42, 34, 0.16),
+    0 24px 48px -14px rgba(10, 42, 34, 0.14),
+    0 2px 8px rgba(10, 42, 34, 0.06),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.glass-interactive.liquid-glass:hover {
+  transform: translateY(-8px) scale(1.01);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0) 70%),
+    rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 32px 60px -12px rgba(12, 51, 40, 0.22),
+    var(--shadow-gold-glow),
+    inset 0 2px 4px rgba(255, 255, 255, 0.95);
+  border-color: rgba(197, 160, 89, 0.55);
+}
+
+.liquid-glass-dark {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0) 70%),
+    rgba(7, 31, 25, 0.55);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 20px 50px -10px rgba(0, 0, 0, 0.3),
+    0 24px 48px -14px rgba(0, 0, 0, 0.45),
+    inset 0 1px 2px rgba(255, 255, 255, 0.12);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.glass-interactive.liquid-glass-dark:hover {
+  transform: translateY(-8px) scale(1.01);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.06) 45%, rgba(255, 255, 255, 0) 70%),
+    rgba(7, 31, 25, 0.75);
+  box-shadow:
+    0 32px 60px -12px rgba(0, 0, 0, 0.5),
+    var(--shadow-gold-glow),
+    inset 0 1px 3px rgba(255, 255, 255, 0.25);
+  border-color: rgba(197, 160, 89, 0.6);
+}
+
+/* ---------- Sliding Pill Language Switcher ---------- */
+.lang-track {
+  /* Forced to a fixed physical direction so the pill's two slots (EN, AR)
+     and the thumb's translateX() math never flip or overflow when the
+     surrounding page switches between rtl and ltr. */
+  direction: ltr;
+  position: relative;
+  width: 104px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(10, 42, 34, 0.12);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  box-shadow:
+    0 4px 12px rgba(10, 42, 34, 0.05),
+    inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+.lang-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 48px;
+  height: 30px;
+  background: #0a2a22;
+  border-radius: 9999px;
+  box-shadow: 0 3px 10px rgba(10, 42, 34, 0.35);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Utility: focus ring for a11y ---------- */
+:focus-visible {
+  outline: 2px solid var(--color-brand-gold);
+  outline-offset: 2px;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
