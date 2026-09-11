@@ -5,15 +5,17 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PlayButton } from "@/components/ui/PlayButton";
+import { useVideoModal } from "@/components/ui/VideoModal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { FadeIn } from "@/components/motion/FadeIn";
 
-type Video = { category: string; title: string; duration: string };
+type Video = { category: string; title: string; duration: string; videoUrl?: string };
 
 export function VideosPreview() {
   const t = useTranslations("home.videosSection");
   const videosT = useTranslations("videosPage");
   const items = (videosT.raw("items") as Video[]).slice(0, 3);
+  const { openVideo } = useVideoModal();
 
   return (
     <section className="py-24 bg-brand-forest text-white relative" id="videos">
@@ -30,10 +32,14 @@ export function VideosPreview() {
           {items.map((video) => (
             <StaggerItem key={video.title}>
               <div className="liquid-glass-dark glass-interactive rounded-3xl overflow-hidden flex flex-col justify-between group h-full">
-                <div className="relative h-52 bg-brand-800 overflow-hidden">
+                <div className="relative aspect-[4/5] bg-brand-800 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-700/60 to-brand-950/80 group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <PlayButton label={video.title} size="md" />
+                    <PlayButton
+                      label={video.title}
+                      size="md"
+                      onClick={() => openVideo(video.videoUrl, video.title)}
+                    />
                   </div>
                   <span className="absolute bottom-3 end-3 bg-black/70 px-2.5 py-0.5 rounded text-xs font-mono text-white">
                     {video.duration}
@@ -41,7 +47,7 @@ export function VideosPreview() {
                 </div>
                 <div className="p-6 space-y-2">
                   <span className="text-xs text-brand-gold font-bold">{video.category}</span>
-                  <h3 className="text-base font-bold text-white group-hover:text-brand-goldLight transition-colors">
+                  <h3 className="text-base font-bold text-brand-goldLight transition-colors">
                     {video.title}
                   </h3>
                 </div>

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { PageHero } from "@/components/layout/PageHero";
+import { buildAlternates } from "@/lib/seo";
+import { GlobalHeroSection } from "@/components/layout/GlobalHeroSection";
 import { DoctorMessage } from "@/components/sections/about/DoctorMessage";
 import { Timeline } from "@/components/sections/about/Timeline";
 import { WideVideoPlayer } from "@/components/ui/WideVideoPlayer";
 import { ExpertiseGrid } from "@/components/sections/about/ExpertiseGrid";
 import { CertificatesGrid } from "@/components/sections/about/CertificatesGrid";
-import { StatsGrid } from "@/components/ui/StatsGrid";
 import { FinalCta } from "@/components/layout/FinalCta";
 
 type Stat = { icon: string; value: number; suffix: string; label: string };
@@ -21,7 +21,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about.hero" });
-  return { title: `${t("title")} ${t("titleHighlight")}` };
+  const meta = await getTranslations({ locale, namespace: "meta.pages.about" });
+  const description = meta("description");
+  return {
+    title: `${t("title")} ${t("titleHighlight")}`,
+    description,
+    alternates: buildAlternates(locale, "/about"),
+    openGraph: {
+      description,
+      images: [{ url: `/${locale}/opengraph-image`, width: 1200, height: 630 }],
+    },
+  };
 }
 
 export default async function AboutPage({
@@ -32,6 +42,7 @@ export default async function AboutPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
+  const common = await getTranslations({ locale, namespace: "common" });
 
   const timelineItems = t.raw("timelineSection.items") as TimelineItem[];
   const expertiseItems = t.raw("expertiseSection.items") as NamedItem[];
@@ -40,14 +51,24 @@ export default async function AboutPage({
 
   return (
     <>
-      <PageHero
+      <GlobalHeroSection
         title={t("hero.title")}
         titleHighlight={t("hero.titleHighlight")}
-        subtitleHtml={t("hero.subtitle")}
+        subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#timeline" }}
-        image={t("hero.image")}
-        imageAlt={t("hero.title")}
+        stats={counters}
+        followLabel={common("followUs")}
+        showStatsBar
+        showDoctor
+        doctorImage={t("hero.image")}
+        doctorImageAlt={t("hero.title")}
+        bg3DElement="brain"
+        bookingCard={{
+          title: common("bookingCard.title"),
+          text: common("bookingCard.text"),
+          cta: common("bookingCard.cta"),
+        }}
       />
       <DoctorMessage
         badgeLabel={t("doctorMessage.badgeLabel")}
@@ -74,6 +95,7 @@ export default async function AboutPage({
         text={t("videoSection.text")}
         poster={t("videoSection.poster")}
         duration={t("videoSection.duration")}
+        videoUrl={t("videoSection.videoUrl")}
       />
       <ExpertiseGrid
         eyebrow={t("expertiseSection.eyebrow")}
@@ -85,7 +107,6 @@ export default async function AboutPage({
         title={t("certificatesSection.title")}
         items={certificates}
       />
-      <StatsGrid stats={counters} />
       <FinalCta />
     </>
   );

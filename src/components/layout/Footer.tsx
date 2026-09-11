@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { Stethoscope, MapPin, Clock, Phone, Mail } from "lucide-react";
+import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { navLinks, siteConfig } from "@/lib/site-config";
 
@@ -15,8 +16,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-forest flex items-center justify-center text-brand-gold border border-brand-gold/30">
-                <Stethoscope className="w-5 h-5" strokeWidth={1.8} />
+              <div className="relative w-10 h-10 shrink-0 rounded-xl bg-white/95 p-1.5 shadow-sm">
+                <Image src="/images/logo-icon.png" alt={siteConfig.name[locale]} fill sizes="40px" className="object-contain p-0.5" />
               </div>
               <div>
                 <div className="font-black text-lg font-tajawal text-white">

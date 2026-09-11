@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Play } from "lucide-react";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
+import { useVideoModal } from "@/components/ui/VideoModal";
 
 export function WideVideoPlayer({
   eyebrow,
@@ -9,13 +12,16 @@ export function WideVideoPlayer({
   text,
   poster,
   duration,
+  videoUrl,
 }: {
   eyebrow: string;
   title: string;
   text?: string;
   poster: string;
   duration: string;
+  videoUrl?: string;
 }) {
+  const { openVideo } = useVideoModal();
   return (
     <section className="py-24 bg-brand-ivory relative overflow-hidden">
       <AmbientGlow />
@@ -45,6 +51,7 @@ export function WideVideoPlayer({
               <button
                 aria-label={title}
                 type="button"
+                onClick={() => openVideo(videoUrl, title)}
                 className="w-20 h-20 rounded-full bg-brand-gold/95 text-brand-forest flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
               >
                 <Play className="w-9 h-9 fill-current -translate-x-0.5 rtl:translate-x-0.5" />

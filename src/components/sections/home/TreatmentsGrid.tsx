@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -9,7 +10,7 @@ import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { FadeIn } from "@/components/motion/FadeIn";
 
-type Treatment = { title: string; text: string; note: string };
+type Treatment = { title: string; text: string; note: string; image?: string };
 
 export function TreatmentsGrid() {
   const t = useTranslations("home.treatmentsSection");
@@ -30,7 +31,19 @@ export function TreatmentsGrid() {
           {items.map((item) => (
             <StaggerItem key={item.title}>
               <GlassCard className="p-8 h-full">
-                <div className="h-2 w-12 bg-brand-gold rounded-full mb-6" />
+                {item.image ? (
+                  <div className="relative mb-5 h-40 w-full overflow-hidden rounded-2xl">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="h-2 w-12 bg-brand-gold rounded-full mb-6" />
+                )}
                 <h3 className="text-xl font-bold text-brand-forest mb-3">{item.title}</h3>
                 <p className="text-sm text-brand-800/80 leading-relaxed mb-6">{item.text}</p>
                 <div className="p-3.5 bg-brand-50/90 rounded-xl text-xs font-semibold text-brand-800 border border-brand-200/60">

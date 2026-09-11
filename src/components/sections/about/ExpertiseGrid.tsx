@@ -1,10 +1,15 @@
-import { Brain, Activity, Target, Zap } from "lucide-react";
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
-const icons = [Brain, Activity, Target, Zap];
+const images = [
+  "/images/brain.png",
+  "/images/spine.png",
+  "/images/pediatric.png",
+  "/images/nerves.png",
+];
 
 type Item = { title: string; text: string };
 
@@ -23,20 +28,25 @@ export function ExpertiseGrid({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading eyebrow={eyebrow} title={title} />
         <StaggerGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {items.map((item, index) => {
-            const Icon = icons[index % icons.length];
-            return (
-              <StaggerItem key={item.title}>
-                <GlassCard className="p-7 h-full group">
-                  <div className="w-14 h-14 rounded-2xl bg-brand-forest text-brand-gold flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mb-5">
-                    <Icon className="w-7 h-7" strokeWidth={1.8} />
-                  </div>
-                  <h3 className="text-base font-bold text-brand-forest mb-2">{item.title}</h3>
+          {items.map((item, index) => (
+            <StaggerItem key={item.title}>
+              <GlassCard className="overflow-hidden h-full flex flex-col group">
+                <div className="relative h-36 sm:h-40 w-full overflow-hidden bg-brand-forest/5">
+                  <Image
+                    src={images[index % images.length]}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 flex flex-col gap-2 flex-1">
+                  <h3 className="text-base font-bold text-brand-forest">{item.title}</h3>
                   <p className="text-sm text-brand-800/80 leading-relaxed">{item.text}</p>
-                </GlassCard>
-              </StaggerItem>
-            );
-          })}
+                </div>
+              </GlassCard>
+            </StaggerItem>
+          ))}
         </StaggerGroup>
       </div>
     </section>

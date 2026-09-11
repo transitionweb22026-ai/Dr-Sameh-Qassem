@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { PageHero } from "@/components/layout/PageHero";
-import { StatsGrid } from "@/components/ui/StatsGrid";
+import { buildAlternates } from "@/lib/seo";
+import { GlobalHeroSection } from "@/components/layout/GlobalHeroSection";
 import { AboutPreview } from "@/components/sections/home/AboutPreview";
 import { SurgeriesGrid } from "@/components/sections/home/SurgeriesGrid";
 import { TreatmentsGrid } from "@/components/sections/home/TreatmentsGrid";
@@ -20,8 +20,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home.hero" });
+  const meta = await getTranslations({ locale, namespace: "meta.pages.home" });
+  const description = meta("description");
   return {
     title: `${t("title")} ${t("titleHighlight")}`,
+    description,
+    alternates: buildAlternates(locale, "/"),
+    openGraph: {
+      description,
+      images: [{ url: `/${locale}/opengraph-image`, width: 1200, height: 630 }],
+    },
   };
 }
 
@@ -33,21 +41,31 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "home" });
+  const common = await getTranslations({ locale, namespace: "common" });
 
   const stats = t.raw("stats") as Stat[];
 
   return (
     <>
-      <PageHero
+      <GlobalHeroSection
         title={t("hero.title")}
         titleHighlight={t("hero.titleHighlight")}
-        subtitleHtml={t.raw("hero.subtitle")}
+        subtitle={t.raw("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "/services" }}
-        image={t("hero.image")}
-        imageAlt={t("hero.title")}
+        stats={stats}
+        followLabel={common("followUs")}
+        showDoctor
+        showStatsBar
+        doctorImage={t("hero.image")}
+        doctorImageAlt={t("hero.title")}
+        bg3DElement="brain"
+        bookingCard={{
+          title: common("bookingCard.title"),
+          text: common("bookingCard.text"),
+          cta: common("bookingCard.cta"),
+        }}
       />
-      <StatsGrid stats={stats} />
       <AboutPreview />
       <SurgeriesGrid />
       <TreatmentsGrid />

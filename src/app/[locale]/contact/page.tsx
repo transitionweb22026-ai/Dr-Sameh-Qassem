@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { PageHero } from "@/components/layout/PageHero";
+import { buildAlternates } from "@/lib/seo";
+import { GlobalHeroSection } from "@/components/layout/GlobalHeroSection";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { ClinicInfo } from "@/components/sections/contact/ClinicInfo";
 import { ClinicMap } from "@/components/sections/contact/ClinicMap";
@@ -8,6 +9,7 @@ import { FaqBlock } from "@/components/sections/shared/FaqBlock";
 import { FinalCta } from "@/components/layout/FinalCta";
 
 type Faq = { q: string; a: string };
+type Stat = { icon: string; value: number; suffix: string; label: string };
 
 export async function generateMetadata({
   params,
@@ -16,7 +18,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact.hero" });
-  return { title: `${t("title")} ${t("titleHighlight")}` };
+  const meta = await getTranslations({ locale, namespace: "meta.pages.contact" });
+  const description = meta("description");
+  return {
+    title: `${t("title")} ${t("titleHighlight")}`,
+    description,
+    alternates: buildAlternates(locale, "/contact"),
+    openGraph: {
+      description,
+      images: [{ url: `/${locale}/opengraph-image`, width: 1200, height: 630 }],
+    },
+  };
 }
 
 export default async function ContactPage({
@@ -27,19 +39,31 @@ export default async function ContactPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "contact" });
+  const common = await getTranslations({ locale, namespace: "common" });
 
   const faqItems = t.raw("faq.items") as Faq[];
+  const stats = t.raw("stats") as Stat[];
 
   return (
     <>
-      <PageHero
+      <GlobalHeroSection
         title={t("hero.title")}
         titleHighlight={t("hero.titleHighlight")}
-        subtitleHtml={t("hero.subtitle")}
+        subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "tel:+201001234567" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#booking-form" }}
-        image={t("hero.image")}
-        imageAlt={t("hero.title")}
+        stats={stats}
+        followLabel={common("followUs")}
+        showStatsBar={false}
+        showDoctor
+        doctorImage={t("hero.image")}
+        doctorImageAlt={t("hero.title")}
+        bg3DElement="skull"
+        bookingCard={{
+          title: common("bookingCard.title"),
+          text: common("bookingCard.text"),
+          cta: common("bookingCard.cta"),
+        }}
       />
       <section className="py-24 bg-brand-ivory relative" id="booking-form">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

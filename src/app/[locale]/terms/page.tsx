@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { buildAlternates } from "@/lib/seo";
 import {
   Siren,
   BookOpen,
@@ -30,7 +31,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "terms.hero" });
-  return { title: `${t("title")} ${t("titleHighlight")}` };
+  const meta = await getTranslations({ locale, namespace: "meta.pages.terms" });
+  const description = meta("description");
+  return {
+    title: `${t("title")} ${t("titleHighlight")}`,
+    description,
+    alternates: buildAlternates(locale, "/terms"),
+    openGraph: {
+      description,
+      images: [{ url: `/${locale}/opengraph-image`, width: 1200, height: 630 }],
+    },
+  };
 }
 
 export default async function TermsPage({

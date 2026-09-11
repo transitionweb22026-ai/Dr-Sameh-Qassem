@@ -1,20 +1,14 @@
 import Image from "next/image";
 import { Calendar, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
+import { getArticleImage, type Article } from "@/lib/articles";
 
-type Featured = {
-  date: string;
-  readTime: string;
-  category: string;
-  title: string;
-  text: string;
-  image: string;
-};
-
-export function FeaturedArticle({ featured }: { featured: Featured }) {
+export function FeaturedArticle({ featured }: { featured: Article }) {
   const common = useTranslations("common");
+  const image = featured.image ?? getArticleImage(featured.category);
 
   return (
     <section className="py-24 bg-brand-ivory relative overflow-hidden">
@@ -24,7 +18,7 @@ export function FeaturedArticle({ featured }: { featured: Featured }) {
           <div className="liquid-glass glass-interactive rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 group">
             <div className="relative h-72 lg:h-full min-h-[320px] overflow-hidden">
               <Image
-                src={featured.image}
+                src={image}
                 alt={featured.title}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -45,13 +39,13 @@ export function FeaturedArticle({ featured }: { featured: Featured }) {
               <p className="text-sm sm:text-base text-brand-800/80 leading-relaxed">
                 {featured.text}
               </p>
-              <button
-                type="button"
+              <Link
+                href={`/articles/${featured.slug}`}
                 className="inline-flex items-center gap-2 text-sm font-bold text-brand-forest hover:text-brand-gold transition-colors pt-2 self-start"
               >
                 <span>{common("readMore")}</span>
                 <ArrowRight className="w-4 h-4 rtl:rotate-180" />
-              </button>
+              </Link>
             </div>
           </div>
         </FadeIn>

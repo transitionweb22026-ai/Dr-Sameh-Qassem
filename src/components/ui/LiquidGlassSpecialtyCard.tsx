@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -7,10 +8,12 @@ import { Link } from "@/i18n/navigation";
 export function LiquidGlassSpecialtyCard({
   title,
   icon: Icon,
+  image,
   href,
 }: {
   title: string;
   icon: LucideIcon;
+  image?: string;
   href: string;
 }) {
   return (
@@ -38,26 +41,51 @@ export function LiquidGlassSpecialtyCard({
         </h3>
 
         <div className="relative flex flex-col items-center">
-          <div className="relative flex h-20 w-20 sm:h-24 sm:w-24 items-center justify-center rounded-full bg-gradient-to-br from-brand-forest via-brand-deep to-brand-deep shadow-[inset_0_2px_10px_rgba(0,0,0,0.5),0_8px_20px_rgba(10,42,34,0.25)] transition-transform duration-300 group-hover:scale-105">
-            {/* HUD-style dashed scanner ring */}
-            <span
-              className="absolute inset-1.5 rounded-full border border-dashed border-brand-gold/30"
-              aria-hidden="true"
-            />
-            {/* pulsing glow behind the icon */}
-            <motion.span
-              className="absolute inset-3 rounded-full bg-brand-gold/25 blur-md"
-              animate={{ opacity: [0.25, 0.55, 0.25] }}
-              transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
-              aria-hidden="true"
-            />
-            <Icon
-              className="relative h-9 w-9 sm:h-11 sm:w-11 text-brand-goldLight"
-              strokeWidth={1.3}
-              style={{ filter: "drop-shadow(0 0 6px rgba(197,160,89,0.85)) drop-shadow(0 0 12px rgba(94,164,140,0.45))" }}
-            />
-          </div>
-          <div className="-mt-1 h-3 w-16 rounded-full bg-brand-900/10 blur-[3px]" aria-hidden="true" />
+          {image ? (
+            <div className="relative h-32 w-32 transition-transform duration-300 group-hover:scale-105 sm:h-36 sm:w-36">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                sizes="160px"
+                className="object-contain"
+                style={{
+                  maskImage: "radial-gradient(circle, black 58%, transparent 88%)",
+                  WebkitMaskImage: "radial-gradient(circle, black 58%, transparent 88%)",
+                }}
+              />
+            </div>
+          ) : (
+            <div className="liquid-glass relative flex h-28 w-28 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 sm:h-32 sm:w-32">
+              {/* glossy sphere highlight, simulating light on curved glass */}
+              <span
+                className="pointer-events-none absolute start-3 top-3 h-8 w-8 rounded-full bg-gradient-to-br from-white/90 via-white/30 to-transparent blur-[2px]"
+                aria-hidden="true"
+              />
+              {/* soft glass-toned glow */}
+              <motion.span
+                className="absolute inset-4 rounded-full bg-gradient-to-br from-brand-gold/25 via-brand-200/30 to-transparent blur-md"
+                animate={{ opacity: [0.35, 0.65, 0.35] }}
+                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
+                aria-hidden="true"
+              />
+              <span className="relative h-11 w-11 sm:h-14 sm:w-14">
+                <Icon
+                  className="absolute inset-0 h-full w-full text-brand-gold/50 blur-[2px]"
+                  strokeWidth={2.2}
+                  aria-hidden="true"
+                />
+                <Icon
+                  className="relative h-full w-full text-brand-forest"
+                  strokeWidth={1.3}
+                  style={{ filter: "drop-shadow(0 3px 6px rgba(10,42,34,0.2))" }}
+                />
+              </span>
+            </div>
+          )}
+          {/* glass pedestal platform the badge appears to rest on */}
+          <div className="liquid-glass -mt-2 h-2.5 w-20 rounded-full opacity-70" aria-hidden="true" />
+          <div className="-mt-1 h-2 w-12 rounded-full bg-brand-900/15 blur-[3px]" aria-hidden="true" />
         </div>
 
         <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex h-9 w-9 items-center justify-center rounded-full border border-slate-100 bg-white text-brand-gold shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-forest group-hover:text-white">

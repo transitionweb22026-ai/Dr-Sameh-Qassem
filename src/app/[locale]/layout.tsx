@@ -8,6 +8,7 @@ import { siteConfig } from "@/lib/site-config";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
+import { VideoModalProvider } from "@/components/ui/VideoModal";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -71,10 +72,12 @@ export default async function LocaleLayout({
         }`}
       >
         <NextIntlClientProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <FloatingActions />
+          <VideoModalProvider>
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <FloatingActions />
+          </VideoModalProvider>
         </NextIntlClientProvider>
       </body>
     </html>

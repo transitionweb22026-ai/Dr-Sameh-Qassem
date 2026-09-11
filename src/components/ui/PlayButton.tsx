@@ -9,11 +9,13 @@ export function PlayButton({
   size = "lg",
   variant = "gold",
   className,
+  onClick,
 }: {
   label: string;
   size?: "md" | "lg";
   variant?: "gold" | "glass";
   className?: string;
+  onClick?: () => void;
 }) {
   const dimensions = size === "lg" ? "w-20 h-20" : "w-14 h-14";
   const iconSize = size === "lg" ? "w-9 h-9" : "w-6 h-6";
@@ -37,6 +39,7 @@ export function PlayButton({
       <button
         type="button"
         aria-label={label}
+        onClick={onClick}
         className={cn(
           "relative rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 hover:scale-110",
           variant === "glass"

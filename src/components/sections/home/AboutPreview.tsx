@@ -20,9 +20,13 @@ export function AboutPreview() {
           image={t("image")}
           imageAlt={t("eyebrow")}
           playVariant="glass"
+          videoUrl={t("videoUrl")}
         >
-          <Link href="/about" className="inline-flex items-center gap-3 group w-fit">
-            <span className="w-9 h-9 rounded-lg bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0 group-hover:bg-brand-gold/25 transition-colors">
+          <Link
+            href="/about"
+            className="mt-1 inline-flex w-fit items-center gap-3 rounded-full bg-white/10 py-2 ps-2 pe-5 transition-colors hover:bg-white/15 group"
+          >
+            <span className="w-9 h-9 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center shrink-0 group-hover:bg-brand-gold/30 transition-colors">
               <UserRound className="w-5 h-5" strokeWidth={1.8} />
             </span>
             <span className="text-sm font-bold text-white group-hover:text-brand-goldLight transition-colors">

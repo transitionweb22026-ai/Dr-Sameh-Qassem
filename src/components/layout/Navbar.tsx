@@ -1,8 +1,9 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import { Menu, Calendar, Stethoscope } from "lucide-react";
+import { Menu, Calendar } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { MobileDrawer } from "./MobileDrawer";
@@ -22,8 +23,8 @@ export function Navbar() {
         <div className="w-full max-w-none px-4 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-20 gap-4">
             <Link href="/" className="flex items-center gap-3.5 group shrink-0">
-              <div className="w-12 h-12 rounded-2xl bg-brand-forest flex items-center justify-center text-brand-gold shadow-md group-hover:scale-105 transition-transform duration-300 border border-brand-gold/30">
-                <Stethoscope className="w-6 h-6" strokeWidth={1.8} />
+              <div className="relative w-12 h-12 shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <Image src="/images/logo-icon.png" alt={siteConfig.name[locale]} fill sizes="48px" className="object-contain" priority />
               </div>
               <div className="flex-col hidden sm:flex">
                 <span className="text-xl font-extrabold tracking-tight text-brand-forest font-tajawal group-hover:text-brand-600 transition-colors">

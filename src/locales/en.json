@@ -1,7 +1,36 @@
 {
   "meta": {
     "siteName": "Dr. Sameh Qassem",
-    "titleSuffix": "Dr. Sameh Qassem | Consultant Neurosurgeon & Spine Surgeon"
+    "titleSuffix": "Dr. Sameh Qassem | Consultant Neurosurgeon & Spine Surgeon",
+    "pages": {
+      "home": {
+        "description": "Dr. Sameh Qassem, Consultant Neurosurgeon & Spine Surgeon, offers precise microsurgery and minimally invasive care powered by advanced 3D navigation with internationally recognized success rates."
+      },
+      "about": {
+        "description": "Meet Dr. Sameh Qassem, Consultant Neurosurgeon & Spine Surgeon with over 15 years of experience building trust with thousands of patients worldwide."
+      },
+      "services": {
+        "description": "Explore Dr. Sameh Qassem's complete range of neurosurgery and spine services, from precise diagnostics and conservative treatments to advanced minimally invasive surgery."
+      },
+      "reviews": {
+        "description": "Read real patient reviews and stories about their experience with Dr. Sameh Qassem, Consultant Neurosurgeon & Spine Surgeon."
+      },
+      "videos": {
+        "description": "Watch short, direct video explanations from Dr. Sameh Qassem on the most common neurological and spinal conditions and their treatments."
+      },
+      "articles": {
+        "description": "Read accurate, reliable medical articles from Dr. Sameh Qassem explaining the latest developments in neurosurgery and spine surgery."
+      },
+      "contact": {
+        "description": "Contact Dr. Sameh Qassem's clinic to book an appointment. Our medical team is ready to answer your questions and help you schedule quickly and easily."
+      },
+      "privacyPolicy": {
+        "description": "Learn how Dr. Sameh Qassem's clinic collects, uses, and protects your personal and medical information."
+      },
+      "terms": {
+        "description": "Read the terms and conditions for booking an appointment or using Dr. Sameh Qassem's website."
+      }
+    }
   },
   "nav": {
     "home": "Home",
@@ -29,12 +58,17 @@
     "consultAboutCase": "Consult About Your Case",
     "learnMore": "Learn More",
     "watchVideo": "Play Video",
-    "channels": "Dr. Sameh Qassem's channels:"
-  },
-  "heroPanel": {
-    "hotlineLabel": "Direct Hotline",
-    "whatsappLabel": "Instant WhatsApp Consultation",
-    "whatsappSub": "Send Scans & Reports"
+    "channels": "Dr. Sameh Qassem's channels:",
+    "followUs": "Follow",
+    "bookingCard": {
+      "title": "Book an Appointment",
+      "text": "Pick a convenient time and our team will confirm within minutes.",
+      "cta": "Book Now"
+    },
+    "videoComingSoon": "Video coming soon",
+    "closeVideo": "Close video",
+    "backToArticles": "Back to Articles",
+    "medicalDisclaimer": "The medical content shown is for educational purposes only and does not replace a direct consultation with a qualified physician."
   },
   "footer": {
     "bio": "Over 15 years of experience in minimally invasive microsurgery, brain tumor resection, and skull base endoscopy, delivered with precision that rivals leading medical institutions in Europe.",
@@ -42,11 +76,26 @@
     "quickLinks": "Quick Links",
     "patientGuides": "Patient Guides",
     "guideLinks": [
-      { "label": "Advanced Surgeries", "href": "/services" },
-      { "label": "Conservative Treatments", "href": "/services" },
-      { "label": "Book a Consultation", "href": "/contact" },
-      { "label": "Prevention & Recovery Tips", "href": "/articles" },
-      { "label": "Accepted Health Insurance", "href": "/contact" }
+      {
+        "label": "Advanced Surgeries",
+        "href": "/services"
+      },
+      {
+        "label": "Conservative Treatments",
+        "href": "/services"
+      },
+      {
+        "label": "Book a Consultation",
+        "href": "/contact"
+      },
+      {
+        "label": "Prevention & Recovery Tips",
+        "href": "/articles"
+      },
+      {
+        "label": "Accepted Health Insurance",
+        "href": "/contact"
+      }
     ],
     "branches": "Branches & Working Hours",
     "branch1Label": "Branch One:",
@@ -70,19 +119,39 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "",
+      "eyebrow": "Expert Care · Precision · Compassion",
       "title": "Advanced, Precise Care for",
       "titleHighlight": "Brain, Nerve & Spine Conditions",
       "subtitle": "With <strong>Dr. Sameh Qassem</strong>, Consultant Neurosurgeon & Spine Surgeon. We deliver the highest standards of interventional microsurgery and minimally invasive care, powered by state-of-the-art 3D navigation systems and internationally recognized success rates.",
       "primaryCta": "Book Your Appointment",
       "secondaryCta": "Explore Our Services",
-      "image": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
     "stats": [
-      { "icon": "clock", "value": 15, "suffix": "+", "label": "Years of Surgical Experience" },
-      { "icon": "activity", "value": 5000, "suffix": "+", "label": "Successful Surgeries" },
-      { "icon": "building", "value": 20, "suffix": "+", "label": "Accredited Hospitals & Centers" },
-      { "icon": "smile", "value": 12000, "suffix": "+", "label": "Patients Regained Mobility" }
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Surgical Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "building",
+        "value": 20,
+        "suffix": "+",
+        "label": "Accredited Hospitals & Centers"
+      },
+      {
+        "icon": "smile",
+        "value": 12000,
+        "suffix": "+",
+        "label": "Patients Regained Mobility"
+      }
     ],
     "about": {
       "eyebrow": "About the Surgeon",
@@ -104,7 +173,8 @@
           "text": "Clear, simplified explanations for patients and families, with a personalized treatment plan and continuous follow-up."
         }
       ],
-      "cta": "Learn More About Doctor"
+      "cta": "Learn More About Doctor",
+      "videoUrl": ""
     },
     "surgeriesSection": {
       "eyebrow": "Our Specialties",
@@ -116,37 +186,46 @@
           "icon": "brain",
           "title": "Microscopic Brain Tumor Surgery",
           "text": "Resection of benign and malignant brain tumors with extreme precision under neuronavigation and real-time neuromonitoring to fully protect speech and motor centers.",
-          "tags": ["3D Neuronavigation", "Awake & Intraoperative Nerve Monitoring"]
+          "tags": [
+            "3D Neuronavigation",
+            "Awake & Intraoperative Nerve Monitoring"
+          ]
         },
         {
           "icon": "spine",
           "title": "Minimally Invasive Spine Surgery",
           "text": "Lumbar and cervical disc removal and neural canal decompression through incisions of just a few centimeters, reducing pain and speeding the return to work within days.",
-          "tags": ["Minimal Incision, Minimal Bleeding", "Same-Day or 24-Hour Discharge"]
+          "tags": [
+            "Minimal Incision, Minimal Bleeding",
+            "Same-Day or 24-Hour Discharge"
+          ]
         },
         {
           "icon": "skull",
           "title": "Advanced Skull Base Endoscopy",
           "text": "Modern techniques for resecting pituitary and skull base tumors via endonasal endoscopy without opening the skull, fully preserving vision and cranial nerves.",
-          "tags": ["No Visible Facial or Head Incisions", "Highest Optic Nerve Protection Rates"]
+          "tags": [
+            "No Visible Facial or Head Incisions",
+            "Highest Optic Nerve Protection Rates"
+          ]
         },
         {
-          "icon": "waves",
-          "title": "Cerebrovascular Surgery",
-          "text": "Treatment of aneurysms and arteriovenous malformations via interventional catheterization.",
-          "tags": ["Cerebral Aneurysms", "Arteriovenous Malformations (AVM)"]
+          "icon": "microscope",
+          "title": "Minimally Invasive Microsurgical Techniques",
+          "text": "Precision micro-instruments and endoscopic tools enable smaller incisions, less tissue disruption, and faster recovery across a wide range of neurosurgical procedures.",
+          "tags": [
+            "Microsurgical Instrumentation",
+            "Reduced Recovery Time"
+          ]
         },
         {
           "icon": "zap",
           "title": "Epilepsy & Nerve Pain Treatment",
           "text": "Surgical and non-surgical solutions for refractory epilepsy and chronic nerve pain.",
-          "tags": ["Drug-Resistant Epilepsy", "Trigeminal Neuralgia"]
-        },
-        {
-          "icon": "network",
-          "title": "Nerve & Spinal Cord Injuries",
-          "text": "Surgical rehabilitation for peripheral nerve injuries and traumatic spine fractures.",
-          "tags": ["Acute Spinal Cord Injuries", "Peripheral Nerve Injuries"]
+          "tags": [
+            "Drug-Resistant Epilepsy",
+            "Trigeminal Neuralgia"
+          ]
         }
       ]
     },
@@ -159,17 +238,20 @@
         {
           "title": "Cervical & Lumbar Disc Herniation Treatment",
           "text": "Image-guided nerve root injection sessions and non-surgical treatment of vertebral inflammation for suitable cases, restoring natural movement balance.",
-          "note": "Indications: Sciatica pain, limb numbness, difficulty walking long distances."
+          "note": "Indications: Sciatica pain, limb numbness, difficulty walking long distances.",
+          "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop"
         },
         {
           "title": "Brain Aneurysm & Vascular Malformation Treatment",
           "text": "Interventional cerebral catheterization, stenting and coiling to prevent brain hemorrhage and sudden strokes with exceptional precision.",
-          "note": "Indications: Sudden severe headache, arteriovenous malformations (AVM)."
+          "note": "Indications: Sudden severe headache, arteriovenous malformations (AVM).",
+          "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop"
         },
         {
           "title": "Trigeminal Neuralgia & Refractory Epilepsy Treatment",
           "text": "Precise radiofrequency or microsurgical decompression of the trigeminal nerve, and vagus nerve stimulator implantation for epilepsy patients.",
-          "note": "Indications: Electric-shock-like facial pain, seizures unresponsive to medication."
+          "note": "Indications: Electric-shock-like facial pain, seizures unresponsive to medication.",
+          "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=800&auto=format&fit=crop"
         }
       ]
     },
@@ -225,12 +307,13 @@
   },
   "about": {
     "hero": {
+      "eyebrow": "Board-Certified Neurosurgeon",
       "title": "About Dr.",
       "titleHighlight": "Sameh Qassem",
       "subtitle": "Over 15 years dedicated to neurosurgery and spine surgery, building trust with thousands of patients around the world.",
       "primaryCta": "Book Your Consultation",
       "secondaryCta": "Watch Career Highlights",
-      "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
     "doctorMessage": {
       "badgeLabel": "A Word from the Doctor",
@@ -250,12 +333,36 @@
       "eyebrow": "Academic & Professional Journey",
       "title": "A Career of Excellence and Continuous Growth",
       "items": [
-        { "year": "2008", "title": "MBBCh, Bachelor of Medicine & Surgery", "text": "Graduated with honors from Kasr Al Ainy Faculty of Medicine, Cairo University." },
-        { "year": "2012", "title": "Master's Degree in Neurosurgery", "text": "Earned his Master's degree following specialized research in skull base surgery." },
-        { "year": "2015", "title": "MRCS - Royal College of Surgeons Fellowship", "text": "International fellowship from the United Kingdom in general and specialized surgery." },
-        { "year": "2017", "title": "MD (Doctorate) in Neurosurgery", "text": "Doctoral thesis on minimally invasive microscopic spine surgery." },
-        { "year": "2019", "title": "Advanced Fellowship Training - Germany", "text": "Advanced training in skull base endoscopy and pituitary tumor resection." },
-        { "year": "2023", "title": "Senior Consultant & International Conference Speaker", "text": "Delivered lectures at the European Association of Neurosurgical Societies (EANS) conferences." }
+        {
+          "year": "2008",
+          "title": "MBBCh, Bachelor of Medicine & Surgery",
+          "text": "Graduated with honors from Kasr Al Ainy Faculty of Medicine, Cairo University."
+        },
+        {
+          "year": "2012",
+          "title": "Master's Degree in Neurosurgery",
+          "text": "Earned his Master's degree following specialized research in skull base surgery."
+        },
+        {
+          "year": "2015",
+          "title": "MRCS - Royal College of Surgeons Fellowship",
+          "text": "International fellowship from the United Kingdom in general and specialized surgery."
+        },
+        {
+          "year": "2017",
+          "title": "MD (Doctorate) in Neurosurgery",
+          "text": "Doctoral thesis on minimally invasive microscopic spine surgery."
+        },
+        {
+          "year": "2019",
+          "title": "Advanced Fellowship Training - Germany",
+          "text": "Advanced training in skull base endoscopy and pituitary tumor resection."
+        },
+        {
+          "year": "2023",
+          "title": "Senior Consultant & International Conference Speaker",
+          "text": "Delivered lectures at the European Association of Neurosurgical Societies (EANS) conferences."
+        }
       ]
     },
     "videoSection": {
@@ -263,46 +370,124 @@
       "title": "Discover Dr. Sameh Qassem's Approach to Treatment",
       "text": "An extended interview in which the doctor explains his vision for patient care and the key technological advances he has introduced into the operating room.",
       "poster": "https://images.unsplash.com/photo-1551190822-a9333d879b1f?q=80&w=2400&auto=format&fit=crop",
-      "duration": "07:12 min"
+      "duration": "07:12 min",
+      "videoUrl": ""
     },
     "expertiseSection": {
       "eyebrow": "Areas of Expertise",
       "title": "Deep Expertise Across Precise Specialties",
       "items": [
-        { "title": "Brain & Nerve Tumor Surgery", "text": "Precise resection of benign and malignant tumors using neuronavigation." },
-        { "title": "Minimally Invasive Spine Surgery", "text": "Modern techniques that reduce pain and post-operative recovery time." },
-        { "title": "Skull Base & Pituitary Endoscopy", "text": "Interventions without traditional open surgery via endonasal endoscopy." },
-        { "title": "Epilepsy & Chronic Nerve Pain Treatment", "text": "Advanced surgical and non-surgical solutions for refractory neuropathic pain." }
+        {
+          "title": "Brain & Nerve Tumor Surgery",
+          "text": "Precise resection of benign and malignant tumors using neuronavigation."
+        },
+        {
+          "title": "Minimally Invasive Spine Surgery",
+          "text": "Modern techniques that reduce pain and post-operative recovery time."
+        },
+        {
+          "title": "Skull Base & Pituitary Endoscopy",
+          "text": "Interventions without traditional open surgery via endonasal endoscopy."
+        },
+        {
+          "title": "Epilepsy & Chronic Nerve Pain Treatment",
+          "text": "Advanced surgical and non-surgical solutions for refractory neuropathic pain."
+        }
       ]
     },
     "certificatesSection": {
       "eyebrow": "Certifications & Memberships",
       "title": "International Accreditation & Distinguished Scientific Memberships",
       "items": [
-        { "title": "Fellowship of the Royal College of Surgeons", "org": "United Kingdom" },
-        { "title": "Membership, European Association of Neurosurgical Societies", "org": "EANS" },
-        { "title": "MD in Neurosurgery", "org": "Cairo University" },
-        { "title": "Advanced Microsurgery Certification", "org": "Germany" },
-        { "title": "Membership, Egyptian Society of Neurological Surgeons", "org": "Egypt" },
-        { "title": "Neuronavigation Systems Training Certificate", "org": "United States" }
+        {
+          "title": "Fellowship of the Royal College of Surgeons",
+          "org": "United Kingdom"
+        },
+        {
+          "title": "Membership, European Association of Neurosurgical Societies",
+          "org": "EANS"
+        },
+        {
+          "title": "MD in Neurosurgery",
+          "org": "Cairo University"
+        },
+        {
+          "title": "Advanced Microsurgery Certification",
+          "org": "Germany"
+        },
+        {
+          "title": "Membership, Egyptian Society of Neurological Surgeons",
+          "org": "Egypt"
+        },
+        {
+          "title": "Neuronavigation Systems Training Certificate",
+          "org": "United States"
+        }
       ]
     },
     "counters": [
-      { "icon": "clock", "value": 15, "suffix": "+", "label": "Years of Experience" },
-      { "icon": "activity", "value": 5000, "suffix": "+", "label": "Successful Surgeries" },
-      { "icon": "award", "value": 12, "suffix": "", "label": "International Certifications" },
-      { "icon": "globe", "value": 9, "suffix": "", "label": "Countries Patients Travel From" }
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "award",
+        "value": 12,
+        "suffix": "",
+        "label": "International Certifications"
+      },
+      {
+        "icon": "globe",
+        "value": 9,
+        "suffix": "",
+        "label": "Countries Patients Travel From"
+      }
     ]
   },
   "services": {
     "hero": {
+      "eyebrow": "Comprehensive Neurosurgical Care",
       "title": "Patient",
       "titleHighlight": "Services",
       "subtitle": "A complete system of precise diagnostics, conservative treatments, and advanced surgeries, tailored around every patient's needs.",
       "primaryCta": "Book Your Consultation",
       "secondaryCta": "Browse Specialties",
-      "image": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
+    "stats": [
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Surgical Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "building",
+        "value": 20,
+        "suffix": "+",
+        "label": "Accredited Hospitals & Centers"
+      },
+      {
+        "icon": "smile",
+        "value": 12000,
+        "suffix": "+",
+        "label": "Patients Regained Mobility"
+      }
+    ],
     "disciplinesSection": {
       "eyebrow": "Core Disciplines",
       "title": "A Comprehensive Care System for Every Condition",
@@ -311,37 +496,51 @@
           "icon": "brain",
           "title": "Brain & Nerve Tumor Surgery",
           "text": "Diagnosis and treatment of brain and spinal cord tumors using state-of-the-art neuronavigation.",
-          "conditions": ["Benign & malignant brain tumors", "Spinal cord tumors", "Brain cysts & congenital malformations"]
+          "conditions": [
+            "Benign & malignant brain tumors",
+            "Spinal cord tumors",
+            "Brain cysts & congenital malformations"
+          ]
         },
         {
           "icon": "spine",
           "title": "Spine Surgery",
           "text": "Comprehensive treatment for neck and back pain through minimally invasive intervention and spinal fixation.",
-          "conditions": ["Lumbar & cervical disc herniation", "Spinal canal stenosis", "Spondylolisthesis & instability"]
+          "conditions": [
+            "Lumbar & cervical disc herniation",
+            "Spinal canal stenosis",
+            "Spondylolisthesis & instability"
+          ]
         },
         {
           "icon": "skull",
           "title": "Endoscopic Skull Base Surgery",
           "text": "Resection of pituitary and skull base tumors without traditional open surgery.",
-          "conditions": ["Pituitary tumors", "Acoustic neuromas", "Cerebrospinal fluid leaks"]
+          "conditions": [
+            "Pituitary tumors",
+            "Acoustic neuromas",
+            "Cerebrospinal fluid leaks"
+          ]
         },
         {
-          "icon": "waves",
-          "title": "Cerebrovascular Surgery",
-          "text": "Treatment of aneurysms and arteriovenous malformations via interventional catheterization.",
-          "conditions": ["Cerebral aneurysms", "Arteriovenous malformations (AVM)", "Hemorrhagic strokes"]
+          "icon": "microscope",
+          "title": "Minimally Invasive Microsurgical Techniques",
+          "text": "Precision micro-instruments and endoscopic tools enable smaller incisions, less tissue disruption, and faster recovery across a wide range of neurosurgical procedures.",
+          "conditions": [
+            "Endoscopic-assisted procedures",
+            "Micro-instrument techniques",
+            "Faster postoperative recovery"
+          ]
         },
         {
           "icon": "zap",
           "title": "Epilepsy & Nerve Pain Treatment",
           "text": "Surgical and non-surgical solutions for refractory epilepsy and chronic nerve pain.",
-          "conditions": ["Drug-resistant epilepsy", "Trigeminal neuralgia", "Involuntary spasms"]
-        },
-        {
-          "icon": "network",
-          "title": "Nerve & Spinal Cord Injuries",
-          "text": "Surgical rehabilitation for peripheral nerve injuries and traumatic spine fractures.",
-          "conditions": ["Acute spinal cord injuries", "Peripheral nerve injuries", "Traumatic vertebral fractures"]
+          "conditions": [
+            "Drug-resistant epilepsy",
+            "Trigeminal neuralgia",
+            "Involuntary spasms"
+          ]
         }
       ]
     },
@@ -349,106 +548,443 @@
       "eyebrow": "Our Methodology",
       "title": "Diagnostic & Treatment Workflow",
       "steps": [
-        { "title": "Initial Consultation", "text": "Reviewing your medical history and a thorough clinical exam to pinpoint your symptoms." },
-        { "title": "Diagnostic Imaging", "text": "Ordering the necessary scans (MRI, CT) and analyzing them with extreme precision." },
-        { "title": "Personalized Treatment Plan", "text": "Building a stepped treatment plan starting with the least invasive option for your case." },
-        { "title": "Medical or Surgical Procedure", "text": "Executing the treatment plan with the latest techniques and the highest safety standards." },
-        { "title": "Follow-Up & Rehabilitation", "text": "Ongoing personalized follow-up to ensure the best long-term recovery outcomes." }
+        {
+          "title": "Initial Consultation",
+          "text": "Reviewing your medical history and a thorough clinical exam to pinpoint your symptoms."
+        },
+        {
+          "title": "Diagnostic Imaging",
+          "text": "Ordering the necessary scans (MRI, CT) and analyzing them with extreme precision."
+        },
+        {
+          "title": "Personalized Treatment Plan",
+          "text": "Building a stepped treatment plan starting with the least invasive option for your case."
+        },
+        {
+          "title": "Medical or Surgical Procedure",
+          "text": "Executing the treatment plan with the latest techniques and the highest safety standards."
+        },
+        {
+          "title": "Follow-Up & Rehabilitation",
+          "text": "Ongoing personalized follow-up to ensure the best long-term recovery outcomes."
+        }
       ]
     },
     "faqSection": {
       "eyebrow": "Service FAQs",
       "title": "Most Common Patient Questions",
       "items": [
-        { "q": "What's the difference between open surgery and minimally invasive surgery?", "a": "Minimally invasive surgery relies on very small incisions and precise endoscopes, reducing pain, bleeding, and hospital stay compared to traditional open surgery." },
-        { "q": "Do all disc herniation cases require surgery?", "a": "No, most cases respond to conservative treatment and physiotherapy; surgery is reserved for cases with neurological weakness or failed conservative treatment." },
-        { "q": "How long does it take to get imaging results and a diagnosis?", "a": "Scans are typically reviewed and an initial diagnosis is made during the same first consultation session." },
-        { "q": "Are there safe anesthesia options for elderly patients?", "a": "Yes, every case is assessed by a specialized anesthesia team to select the safest protocol based on age and overall health." },
-        { "q": "Can I get a second opinion?", "a": "Absolutely, we welcome reviewing reports and scans of previously diagnosed cases to provide an independent medical opinion." },
-        { "q": "What is the post-surgery follow-up process?", "a": "We set a clear schedule for follow-up appointments, checkups, and physiotherapy sessions if needed, to ensure the best possible recovery." },
-        { "q": "Is emergency service available around the clock?", "a": "Yes, a hotline for neurological emergencies is available 24/7." },
-        { "q": "Can I get a detailed medical report in English?", "a": "Yes, we provide all medical reports and correspondence in both Arabic and English to facilitate communication with insurance companies or overseas treatment centers." }
+        {
+          "q": "What's the difference between open surgery and minimally invasive surgery?",
+          "a": "Minimally invasive surgery relies on very small incisions and precise endoscopes, reducing pain, bleeding, and hospital stay compared to traditional open surgery."
+        },
+        {
+          "q": "Do all disc herniation cases require surgery?",
+          "a": "No, most cases respond to conservative treatment and physiotherapy; surgery is reserved for cases with neurological weakness or failed conservative treatment."
+        },
+        {
+          "q": "How long does it take to get imaging results and a diagnosis?",
+          "a": "Scans are typically reviewed and an initial diagnosis is made during the same first consultation session."
+        },
+        {
+          "q": "Are there safe anesthesia options for elderly patients?",
+          "a": "Yes, every case is assessed by a specialized anesthesia team to select the safest protocol based on age and overall health."
+        },
+        {
+          "q": "Can I get a second opinion?",
+          "a": "Absolutely, we welcome reviewing reports and scans of previously diagnosed cases to provide an independent medical opinion."
+        },
+        {
+          "q": "What is the post-surgery follow-up process?",
+          "a": "We set a clear schedule for follow-up appointments, checkups, and physiotherapy sessions if needed, to ensure the best possible recovery."
+        },
+        {
+          "q": "Is emergency service available around the clock?",
+          "a": "Yes, a hotline for neurological emergencies is available 24/7."
+        },
+        {
+          "q": "Can I get a detailed medical report in English?",
+          "a": "Yes, we provide all medical reports and correspondence in both Arabic and English to facilitate communication with insurance companies or overseas treatment centers."
+        }
       ]
     }
   },
   "reviews": {
     "hero": {
+      "eyebrow": "Trusted By Our Patients",
       "title": "Patient",
       "titleHighlight": "Reviews",
       "subtitle": "Real stories from patients who regained their normal lives through precise, compassionate medical care.",
       "primaryCta": "Book Your Consultation",
       "secondaryCta": "See All Reviews",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
-    "filters": ["All", "Brain Surgery", "Spine", "Skull Base", "Vascular"],
+    "stats": [
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Surgical Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "building",
+        "value": 20,
+        "suffix": "+",
+        "label": "Accredited Hospitals & Centers"
+      },
+      {
+        "icon": "smile",
+        "value": 12000,
+        "suffix": "+",
+        "label": "Patients Regained Mobility"
+      }
+    ],
+    "gridSection": {
+      "eyebrow": "Patient Reviews",
+      "title": "What Our Patients Say",
+      "text": "Real experiences from patients who trusted us with their care."
+    },
     "items": [
-      { "name": "Ahmed Mahmoud", "location": "Cairo, Egypt", "procedure": "Endoscopic Lumbar Discectomy", "category": "Spine", "rating": 5, "text": "I suffered from a severe lumbar disc herniation that kept me off work for 6 months. After minimally invasive endoscopic surgery with Dr. Sameh Qassem, the pain disappeared completely on the day of surgery and I returned to work in just two weeks!" },
-      { "name": "Fatima Al-Otaibi", "location": "Riyadh, Saudi Arabia", "procedure": "Skull Base Endoscopy", "category": "Skull Base", "rating": 5, "text": "I traveled from Riyadh specifically for Dr. Sameh Qassem to remove a pituitary tumor through the nose. His professionalism, precision, and thorough explanation of every detail put us completely at ease. The surgery was 100% successful." },
-      { "name": "Omar Al-Hashimi", "location": "Dubai, UAE", "procedure": "Canal Decompression & Spinal Fixation", "category": "Spine", "rating": 5, "text": "An exceptional, kind, and attentive doctor. My father suffered from severe spinal canal stenosis and difficulty walking. Dr. Sameh Qassem performed minimally invasive spinal fixation, and now he walks daily without any pain." },
-      { "name": "Mona Al-Sharif", "location": "Alexandria, Egypt", "procedure": "Microscopic Brain Tumor Resection", "category": "Brain Surgery", "rating": 5, "text": "The shock of a brain tumor diagnosis was overwhelming, but Dr. Sameh's confidence and detailed explanation of every step gave us hope. Thankfully the surgery was completely successful with no complications." },
-      { "name": "Khalid Al-Nuaimi", "location": "Doha, Qatar", "procedure": "Aneurysm Treatment", "category": "Vascular", "rating": 5, "text": "Discovering an arterial aneurysm was terrifying, but Dr. Sameh's team handled it with remarkable speed and precision through interventional catheterization. I'm grateful to everyone who contributed to this exceptional care." },
-      { "name": "Sara Youssef", "location": "Jeddah, Saudi Arabia", "procedure": "Trigeminal Neuralgia Treatment", "category": "Brain Surgery", "rating": 5, "text": "I suffered from trigeminal nerve pain for years without an accurate diagnosis. Dr. Sameh quickly diagnosed the condition and set a treatment plan that ended my suffering completely. I'm grateful to him and his wonderful medical team." },
-      { "name": "Youssef Abdullah", "location": "Manama, Bahrain", "procedure": "Cervical Discectomy", "category": "Spine", "rating": 5, "text": "The pain in my neck kept me from sleeping for months. After surgery with Dr. Sameh Qassem, I got my peaceful sleep and normal life back. I highly recommend him to anyone facing similar issues." },
-      { "name": "Layla Murad", "location": "Kuwait City, Kuwait", "procedure": "Pituitary Tumor Resection", "category": "Skull Base", "rating": 5, "text": "The diagnostic precision and quality of post-operative follow-up were outstanding. The nursing and reception team were also extremely kind and professional throughout treatment." },
-      { "name": "Mohammed Al-Zahrani", "location": "Medina, Saudi Arabia", "procedure": "Lumbar Spinal Fixation", "category": "Spine", "rating": 5, "text": "After years of chronic pain due to spinal instability, I had the surgery with Dr. Sameh and the result was far better than I expected. May God reward him abundantly." }
+      {
+        "name": "Ahmed Mahmoud",
+        "location": "Cairo, Egypt",
+        "procedure": "Endoscopic Lumbar Discectomy",
+        "category": "Spine",
+        "rating": 5,
+        "text": "I suffered from a severe lumbar disc herniation that kept me off work for 6 months. After minimally invasive endoscopic surgery with Dr. Sameh Qassem, the pain disappeared completely on the day of surgery and I returned to work in just two weeks!"
+      },
+      {
+        "name": "Fatima Al-Otaibi",
+        "location": "Riyadh, Saudi Arabia",
+        "procedure": "Skull Base Endoscopy",
+        "category": "Skull Base",
+        "rating": 5,
+        "text": "I traveled from Riyadh specifically for Dr. Sameh Qassem to remove a pituitary tumor through the nose. His professionalism, precision, and thorough explanation of every detail put us completely at ease. The surgery was 100% successful."
+      },
+      {
+        "name": "Omar Al-Hashimi",
+        "location": "Dubai, UAE",
+        "procedure": "Canal Decompression & Spinal Fixation",
+        "category": "Spine",
+        "rating": 5,
+        "text": "An exceptional, kind, and attentive doctor. My father suffered from severe spinal canal stenosis and difficulty walking. Dr. Sameh Qassem performed minimally invasive spinal fixation, and now he walks daily without any pain."
+      },
+      {
+        "name": "Mona Al-Sharif",
+        "location": "Alexandria, Egypt",
+        "procedure": "Microscopic Brain Tumor Resection",
+        "category": "Brain Surgery",
+        "rating": 5,
+        "text": "The shock of a brain tumor diagnosis was overwhelming, but Dr. Sameh's confidence and detailed explanation of every step gave us hope. Thankfully the surgery was completely successful with no complications."
+      },
+      {
+        "name": "Khalid Al-Nuaimi",
+        "location": "Doha, Qatar",
+        "procedure": "Aneurysm Treatment",
+        "category": "Vascular",
+        "rating": 5,
+        "text": "Discovering an arterial aneurysm was terrifying, but Dr. Sameh's team handled it with remarkable speed and precision through interventional catheterization. I'm grateful to everyone who contributed to this exceptional care."
+      },
+      {
+        "name": "Sara Youssef",
+        "location": "Jeddah, Saudi Arabia",
+        "procedure": "Trigeminal Neuralgia Treatment",
+        "category": "Brain Surgery",
+        "rating": 5,
+        "text": "I suffered from trigeminal nerve pain for years without an accurate diagnosis. Dr. Sameh quickly diagnosed the condition and set a treatment plan that ended my suffering completely. I'm grateful to him and his wonderful medical team."
+      },
+      {
+        "name": "Youssef Abdullah",
+        "location": "Manama, Bahrain",
+        "procedure": "Cervical Discectomy",
+        "category": "Spine",
+        "rating": 5,
+        "text": "The pain in my neck kept me from sleeping for months. After surgery with Dr. Sameh Qassem, I got my peaceful sleep and normal life back. I highly recommend him to anyone facing similar issues."
+      },
+      {
+        "name": "Layla Murad",
+        "location": "Kuwait City, Kuwait",
+        "procedure": "Pituitary Tumor Resection",
+        "category": "Skull Base",
+        "rating": 5,
+        "text": "The diagnostic precision and quality of post-operative follow-up were outstanding. The nursing and reception team were also extremely kind and professional throughout treatment."
+      },
+      {
+        "name": "Mohammed Al-Zahrani",
+        "location": "Medina, Saudi Arabia",
+        "procedure": "Lumbar Spinal Fixation",
+        "category": "Spine",
+        "rating": 5,
+        "text": "After years of chronic pain due to spinal instability, I had the surgery with Dr. Sameh and the result was far better than I expected. May God reward him abundantly."
+      }
     ]
   },
   "videosPage": {
     "hero": {
+      "eyebrow": "Medical Insights On Video",
       "title": "Video",
       "titleHighlight": "Library",
       "subtitle": "Short, direct video explanations from Dr. Sameh Qassem on the most common neurological and spinal conditions.",
       "primaryCta": "Book Your Consultation",
       "secondaryCta": "Follow Us on YouTube",
-      "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
+    "stats": [
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Surgical Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "building",
+        "value": 20,
+        "suffix": "+",
+        "label": "Accredited Hospitals & Centers"
+      },
+      {
+        "icon": "smile",
+        "value": 12000,
+        "suffix": "+",
+        "label": "Patients Regained Mobility"
+      }
+    ],
     "items": [
-      { "category": "Spine", "title": "When Is Disc Herniation Surgery Urgent and Necessary?", "duration": "04:15" },
-      { "category": "Brain Surgery", "title": "The Latest Endoscopic Techniques for Pituitary Tumor Removal", "duration": "06:30" },
-      { "category": "Rehabilitation", "title": "Essential Guidelines for Healthy Sitting & Sleeping After Spine Surgery", "duration": "05:20" },
-      { "category": "Vascular", "title": "How We Detect Aneurysms Before Rupture Occurs", "duration": "03:47" },
-      { "category": "Skull Base", "title": "Endonasal Endoscopy: A Safe Alternative to Traditional Skull Opening", "duration": "05:58" },
-      { "category": "Epilepsy & Nerve Pain", "title": "Treating Trigeminal Neuralgia Without Open Surgery", "duration": "04:32" },
-      { "category": "Spine", "title": "5 Warning Signs of Back Pain You Should Never Ignore", "duration": "03:12" },
-      { "category": "General Awareness", "title": "The Difference Between an Ordinary Headache and a Dangerous One", "duration": "04:50" },
-      { "category": "Rehabilitation", "title": "Simple Exercises to Strengthen Your Back and Prevent Injury", "duration": "06:05" }
+      {
+        "category": "Spine",
+        "title": "When Is Disc Herniation Surgery Urgent and Necessary?",
+        "duration": "04:15",
+        "videoUrl": ""
+      },
+      {
+        "category": "Brain Surgery",
+        "title": "The Latest Endoscopic Techniques for Pituitary Tumor Removal",
+        "duration": "06:30",
+        "videoUrl": ""
+      },
+      {
+        "category": "Rehabilitation",
+        "title": "Essential Guidelines for Healthy Sitting & Sleeping After Spine Surgery",
+        "duration": "05:20",
+        "videoUrl": ""
+      },
+      {
+        "category": "Vascular",
+        "title": "How We Detect Aneurysms Before Rupture Occurs",
+        "duration": "03:47",
+        "videoUrl": ""
+      },
+      {
+        "category": "Skull Base",
+        "title": "Endonasal Endoscopy: A Safe Alternative to Traditional Skull Opening",
+        "duration": "05:58",
+        "videoUrl": ""
+      },
+      {
+        "category": "Epilepsy & Nerve Pain",
+        "title": "Treating Trigeminal Neuralgia Without Open Surgery",
+        "duration": "04:32",
+        "videoUrl": ""
+      },
+      {
+        "category": "Spine",
+        "title": "5 Warning Signs of Back Pain You Should Never Ignore",
+        "duration": "03:12",
+        "videoUrl": ""
+      },
+      {
+        "category": "General Awareness",
+        "title": "The Difference Between an Ordinary Headache and a Dangerous One",
+        "duration": "04:50",
+        "videoUrl": ""
+      },
+      {
+        "category": "Rehabilitation",
+        "title": "Simple Exercises to Strengthen Your Back and Prevent Injury",
+        "duration": "06:05",
+        "videoUrl": ""
+      }
     ]
   },
   "articlesPage": {
     "hero": {
+      "eyebrow": "Patient Education Library",
       "title": "Medical",
       "titleHighlight": "Articles",
       "subtitle": "Accurate, reliable medical content explaining the latest scientific developments in neurosurgery and spine surgery.",
       "primaryCta": "Book Your Consultation",
       "secondaryCta": "Browse Articles",
-      "image": "https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
+    "stats": [
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Surgical Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "building",
+        "value": 20,
+        "suffix": "+",
+        "label": "Accredited Hospitals & Centers"
+      },
+      {
+        "icon": "smile",
+        "value": 12000,
+        "suffix": "+",
+        "label": "Patients Regained Mobility"
+      }
+    ],
     "featured": {
       "date": "October 20, 2024",
       "readTime": "8 min read",
       "category": "Brain Surgery",
       "title": "The Neuronavigation Revolution: How Technology Transformed the Future of Brain Tumor Surgery",
       "text": "An in-depth look at how 3D surgical navigation systems and intraoperative imaging raise safety and precision rates in resecting complex brain tumors, with real case studies from the operating room.",
-      "image": "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?q=80&w=2400&auto=format&fit=crop",
+      "slug": "neuronavigation-revolution",
+      "content": [
+        "Neuronavigation works like a GPS system for the brain. Before surgery, a patient's MRI and CT scans are fused into a detailed 3D map, which the surgical team uses in the operating room to track instruments in real time relative to the tumor and the surrounding healthy tissue.",
+        "This precision translates directly into safer outcomes: smaller incisions, more accurate margins around critical areas that control speech, movement, and vision, and a significantly reduced risk of damaging healthy brain tissue during resection.",
+        "It is important to understand that navigation technology supports the surgeon's judgment rather than replacing it — it is most powerful when combined with intraoperative imaging and an experienced surgical team. Every case is different, and the right approach is always determined after a thorough evaluation with your neurosurgeon."
+      ]
     },
     "items": [
-      { "date": "October 12, 2024", "readTime": "5 min read", "category": "General Awareness", "title": "When Should You See a Neurosurgeon Without Delay?", "text": "Critical warning signs such as sudden limb numbness, escalating headaches with blurred vision, or disturbed balance and coordination." },
-      { "date": "September 28, 2024", "readTime": "4 min read", "category": "Brain Surgery", "title": "What's New in Brain Tumor Treatment: Neuronavigation & Limited Intervention", "text": "How CT imaging and 3D navigation systems during surgery raise safety rates and enable near-complete tumor resection." },
-      { "date": "September 15, 2024", "readTime": "6 min read", "category": "Spine", "title": "Effective Ways to Prevent Lower Back Pain for Office Workers", "text": "Simple stretching exercises and evidence-based sitting postures to protect the lumbar and sacral spine from chronic pressure and disc herniation." },
-      { "date": "September 02, 2024", "readTime": "5 min read", "category": "Skull Base", "title": "Pituitary Tumors: Symptoms You Should Never Ignore", "text": "From chronic headaches to vision and hormonal disturbances, learn the early signs and endoscopic treatment options." },
-      { "date": "August 20, 2024", "readTime": "4 min read", "category": "Vascular", "title": "Cerebral Aneurysms: Can They Be Treated Before They Rupture?", "text": "The importance of early screening for at-risk individuals and modern interventional catheterization treatment options." },
-      { "date": "August 05, 2024", "readTime": "6 min read", "category": "Epilepsy", "title": "Refractory Epilepsy: When Is Surgery the Best Option?", "text": "Modern treatment options for drug-resistant epilepsy patients that go beyond traditional medication." }
+      {
+        "date": "October 12, 2024",
+        "readTime": "5 min read",
+        "category": "General Awareness",
+        "title": "When Should You See a Neurosurgeon Without Delay?",
+        "text": "Critical warning signs such as sudden limb numbness, escalating headaches with blurred vision, or disturbed balance and coordination.",
+        "slug": "when-to-see-a-neurosurgeon",
+        "content": [
+          "Certain neurological symptoms should never be watched and waited on. Sudden numbness or weakness in an arm or leg, a severe headache that keeps getting worse and comes with blurred or double vision, and a sudden loss of balance or coordination are all signs that deserve immediate medical attention.",
+          "The reason timing matters so much is that many neurological conditions, from bleeding and clots to tumors and nerve compression, respond far better to treatment when caught early. A delay of even a few hours can change the course of recovery in some cases.",
+          "Experiencing one of these symptoms does not automatically mean surgery is needed; many cases are resolved with monitoring or medication. But a prompt evaluation by a neurosurgeon is the only way to know for certain, so don't hesitate to reach out to our clinic or the nearest emergency department."
+        ]
+      },
+      {
+        "date": "September 28, 2024",
+        "readTime": "4 min read",
+        "category": "Brain Surgery",
+        "title": "What's New in Brain Tumor Treatment: Neuronavigation & Limited Intervention",
+        "text": "How CT imaging and 3D navigation systems during surgery raise safety rates and enable near-complete tumor resection.",
+        "slug": "brain-tumor-treatment-innovations",
+        "content": [
+          "The treatment of brain tumors has shifted decisively toward minimally invasive approaches. Where once a large craniotomy was the only option, many tumors today can be reached through smaller, precisely planned corridors guided by advanced imaging.",
+          "Techniques such as endoscopic tumor removal, intraoperative MRI, and awake craniotomy, where the patient remains conscious so the team can map speech and movement in real time, allow surgeons to remove more of the tumor while protecting critical brain function.",
+          "The result for patients is a more personalized treatment plan, shorter hospital stays, and faster return to daily life, with the surgical strategy tailored to the tumor's size, location, and relationship to the surrounding brain structures."
+        ]
+      },
+      {
+        "date": "September 15, 2024",
+        "readTime": "6 min read",
+        "category": "Spine",
+        "title": "Effective Ways to Prevent Lower Back Pain for Office Workers",
+        "text": "Simple stretching exercises and evidence-based sitting postures to protect the lumbar and sacral spine from chronic pressure and disc herniation.",
+        "slug": "prevent-lower-back-pain-office-workers",
+        "content": [
+          "Long hours seated at a desk put sustained pressure on the discs and muscles of the lower back, especially when posture is poor or the workstation isn't set up correctly. Over time, this can lead to chronic stiffness and pain.",
+          "Simple habits make a real difference: keep your screen at eye level, your lower back supported by the chair, and your feet flat on the floor. Stand up and move for a few minutes every 45 to 60 minutes, and build a habit of gentle core and back-strengthening exercises a few times a week.",
+          "If the pain becomes persistent, radiates down the leg, or is accompanied by numbness or weakness, it's a sign that self-care alone isn't enough. A spine specialist can identify the underlying cause and recommend the right treatment path."
+        ]
+      },
+      {
+        "date": "September 02, 2024",
+        "readTime": "5 min read",
+        "category": "Skull Base",
+        "title": "Pituitary Tumors: Symptoms You Should Never Ignore",
+        "text": "From chronic headaches to vision and hormonal disturbances, learn the early signs and endoscopic treatment options.",
+        "slug": "pituitary-tumor-symptoms",
+        "content": [
+          "The pituitary gland is small, about the size of a pea, but it regulates many of the body's essential hormones. Most pituitary tumors are benign, but because of the gland's location and function, even a small growth can have a noticeable effect.",
+          "Warning signs include persistent headaches, changes in peripheral vision, unexplained fatigue, irregular menstrual cycles, or unusual changes in growth or body proportions. These symptoms occur either because the tumor is pressing on nearby structures or because it is disrupting normal hormone levels.",
+          "Diagnosis typically involves an MRI scan alongside a hormonal blood panel. Many pituitary tumors today can be removed through the nose using endonasal endoscopic surgery, avoiding open skull surgery entirely and allowing for a considerably faster recovery."
+        ]
+      },
+      {
+        "date": "August 20, 2024",
+        "readTime": "4 min read",
+        "category": "Vascular",
+        "title": "Cerebral Aneurysms: Can They Be Treated Before They Rupture?",
+        "text": "The importance of early screening for at-risk individuals and modern interventional catheterization treatment options.",
+        "slug": "cerebral-aneurysms-treatment",
+        "content": [
+          "A cerebral aneurysm is a weak, bulging spot in the wall of a brain blood vessel. Most aneurysms never rupture and cause no symptoms at all, which is why many are discovered incidentally during imaging done for an unrelated reason.",
+          "Risk factors for growth and rupture include high blood pressure, smoking, and a family history of aneurysms or connective tissue conditions. When an aneurysm is found early, monitoring or preventive treatment can significantly reduce the risk of a life-threatening rupture.",
+          "Two main treatment options exist today: microsurgical clipping, performed through open surgery, and endovascular coiling, a minimally invasive procedure performed through the blood vessels. The right choice depends on the aneurysm's size, shape, and location, and is decided together with your neurosurgeon."
+        ]
+      },
+      {
+        "date": "August 05, 2024",
+        "readTime": "6 min read",
+        "category": "Epilepsy",
+        "title": "Refractory Epilepsy: When Is Surgery the Best Option?",
+        "text": "Modern treatment options for drug-resistant epilepsy patients that go beyond traditional medication.",
+        "slug": "refractory-epilepsy-surgery",
+        "content": [
+          "Epilepsy is generally considered drug-resistant, or refractory, when seizures continue despite trying at least two appropriately chosen medications at adequate doses. This affects a meaningful share of people living with epilepsy and often significantly impacts quality of life.",
+          "The evaluation for surgical candidacy is thorough: it typically includes video-EEG monitoring to record seizures as they happen, along with detailed brain imaging to pinpoint the exact region where the seizures originate.",
+          "When a clear, safely operable seizure focus is identified, surgery can be transformative. A large proportion of carefully selected patients become seizure-free or see a dramatic reduction in seizure frequency, often allowing them to reduce their medication burden as well."
+        ]
+      }
     ]
   },
   "contact": {
     "hero": {
+      "eyebrow": "Let's Start Your Recovery",
       "title": "Contact",
       "titleHighlight": "Us",
       "subtitle": "Our medical team is ready to answer your questions and help you book your appointment quickly and easily.",
       "primaryCta": "Call Us Now",
       "secondaryCta": "Message Us on WhatsApp",
-      "image": "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2400&auto=format&fit=crop"
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2400&auto=format&fit=crop"
     },
+    "stats": [
+      {
+        "icon": "clock",
+        "value": 15,
+        "suffix": "+",
+        "label": "Years of Surgical Experience"
+      },
+      {
+        "icon": "activity",
+        "value": 5000,
+        "suffix": "+",
+        "label": "Successful Surgeries"
+      },
+      {
+        "icon": "building",
+        "value": 20,
+        "suffix": "+",
+        "label": "Accredited Hospitals & Centers"
+      },
+      {
+        "icon": "smile",
+        "value": 12000,
+        "suffix": "+",
+        "label": "Patients Regained Mobility"
+      }
+    ],
     "form": {
       "eyebrow": "Book Your Consultation",
       "title": "Medical Consultation Booking Form",
@@ -459,7 +995,14 @@
       "phonePlaceholder": "+1 234 567 8900",
       "serviceLabel": "Requested Service",
       "servicePlaceholder": "Select consultation type",
-      "services": ["Brain Tumor Surgery", "Spine Surgery", "Skull Base Endoscopy", "Vascular Treatment", "Epilepsy & Nerve Pain Treatment", "General Consultation / Second Opinion"],
+      "services": [
+        "Brain Tumor Surgery",
+        "Spine Surgery",
+        "Skull Base Endoscopy",
+        "Vascular Treatment",
+        "Epilepsy & Nerve Pain Treatment",
+        "General Consultation / Second Opinion"
+      ],
       "clinicLabel": "Preferred Clinic",
       "messageLabel": "Case Details (Optional)",
       "messagePlaceholder": "Briefly describe your symptoms or inquiry...",
