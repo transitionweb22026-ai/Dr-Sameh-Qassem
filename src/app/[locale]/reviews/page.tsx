@@ -13,7 +13,6 @@ type Review = {
   rating: number;
   text: string;
 };
-type Stat = { icon: string; value: number; suffix: string; label: string };
 
 export async function generateMetadata({
   params,
@@ -46,7 +45,6 @@ export default async function ReviewsPage({
   const common = await getTranslations({ locale, namespace: "common" });
 
   const items = t.raw("items") as Review[];
-  const stats = t.raw("stats") as Stat[];
 
   return (
     <>
@@ -56,9 +54,7 @@ export default async function ReviewsPage({
         subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#reviews" }}
-        stats={stats}
         followLabel={common("followUs")}
-        showStatsBar={false}
         showDoctor
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}

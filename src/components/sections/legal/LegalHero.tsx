@@ -26,7 +26,7 @@ export function LegalHero({
       />
       <div className="relative z-10 mx-auto max-w-3xl px-4 pt-10 text-center sm:px-6 sm:pt-14 lg:px-8">
         <FadeIn>
-          <span className="text-sm font-bold uppercase tracking-wider text-brand-gold">
+          <span className="text-base font-bold uppercase tracking-wider text-brand-gold">
             {eyebrow}
           </span>
         </FadeIn>

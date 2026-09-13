@@ -7,6 +7,7 @@ import { Timeline } from "@/components/sections/about/Timeline";
 import { WideVideoPlayer } from "@/components/ui/WideVideoPlayer";
 import { ExpertiseGrid } from "@/components/sections/about/ExpertiseGrid";
 import { CertificatesGrid } from "@/components/sections/about/CertificatesGrid";
+import { StatsSection } from "@/components/layout/StatsSection";
 import { FinalCta } from "@/components/layout/FinalCta";
 
 type Stat = { icon: string; value: number; suffix: string; label: string };
@@ -57,9 +58,7 @@ export default async function AboutPage({
         subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#timeline" }}
-        stats={counters}
         followLabel={common("followUs")}
-        showStatsBar
         showDoctor
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}
@@ -106,6 +105,12 @@ export default async function AboutPage({
         eyebrow={t("certificatesSection.eyebrow")}
         title={t("certificatesSection.title")}
         items={certificates}
+      />
+      <StatsSection
+        stats={counters}
+        eyebrow={t("statsSection.eyebrow")}
+        title={t("statsSection.title")}
+        text={t("statsSection.text")}
       />
       <FinalCta />
     </>

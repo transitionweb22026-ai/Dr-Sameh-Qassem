@@ -1,15 +1,12 @@
 import { Calendar, ArrowRight, Phone } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { DynamicIcon } from "@/lib/icons";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
-import { InstagramIcon, YoutubeIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
+import { InstagramIcon, FacebookIcon, TikTokIcon } from "@/components/ui/SocialIcons";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 type Cta = { label: string; href: string };
-type Stat = { icon: string; value: number; suffix: string; label: string };
 type BookingCard = { title: string; text: string; cta: string };
 
 function isExternalHref(href: string) {
@@ -45,10 +42,8 @@ export function GlobalHeroSection({
   subtitle,
   primaryCta,
   secondaryCta,
-  stats,
   followLabel,
   showDoctor = false,
-  showStatsBar = false,
   doctorImage,
   doctorImageAlt,
   bg3DElement = "brain",
@@ -59,10 +54,8 @@ export function GlobalHeroSection({
   subtitle: string;
   primaryCta: Cta;
   secondaryCta: Cta;
-  stats: Stat[];
   followLabel?: string;
   showDoctor?: boolean;
-  showStatsBar?: boolean;
   doctorImage?: string;
   doctorImageAlt?: string;
   bg3DElement?: string;
@@ -233,13 +226,13 @@ export function GlobalHeroSection({
                     </span>
                     <div className="flex items-center gap-1.5">
                       <a
-                        href={siteConfig.social.linkedin}
+                        href={siteConfig.social.facebook}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="LinkedIn"
+                        title="Facebook"
                         className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
                       >
-                        <LinkedInIcon className="h-3 w-3" />
+                        <FacebookIcon className="h-3 w-3" />
                       </a>
                       <a
                         href={siteConfig.social.instagram}
@@ -251,13 +244,13 @@ export function GlobalHeroSection({
                         <InstagramIcon className="h-3 w-3" />
                       </a>
                       <a
-                        href={siteConfig.social.youtube}
+                        href={siteConfig.social.tiktok}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title="YouTube"
+                        title="TikTok"
                         className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
                       >
-                        <YoutubeIcon className="h-3 w-3" />
+                        <TikTokIcon className="h-3 w-3" />
                       </a>
                     </div>
                   </div>
@@ -265,36 +258,6 @@ export function GlobalHeroSection({
               </div>
             </div>
           </FadeIn>
-        ) : null}
-
-        {/* Floating stats pill bar — Home and About only */}
-        {showStatsBar && stats.length > 0 ? (
-          <div className="mt-12 sm:mt-16">
-            <StaggerGroup
-              className="liquid-glass mx-auto flex max-w-6xl flex-wrap items-center justify-around gap-x-6 gap-y-5 rounded-[2rem] p-5 sm:flex-nowrap sm:rounded-full sm:p-4"
-              amount={0.4}
-            >
-              {stats.map((stat) => (
-                <StaggerItem key={stat.label} direction="none">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-forest/10 text-brand-forest sm:h-11 sm:w-11">
-                      <DynamicIcon name={stat.icon} className="h-5 w-5" strokeWidth={1.8} />
-                    </div>
-                    <div className="text-start">
-                      <AnimatedCounter
-                        value={stat.value}
-                        suffix={stat.suffix}
-                        className="block text-lg font-black leading-tight text-brand-forest font-tajawal sm:text-xl"
-                      />
-                      <div className="text-[11px] font-medium text-brand-800/70 sm:text-xs">
-                        {stat.label}
-                      </div>
-                    </div>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerGroup>
-          </div>
         ) : null}
       </div>
     </section>

@@ -9,6 +9,7 @@ import { TestimonialsSlider } from "@/components/sections/home/TestimonialsSlide
 import { VideosPreview } from "@/components/sections/home/VideosPreview";
 import { ArticlesPreview } from "@/components/sections/home/ArticlesPreview";
 import { FaqSection } from "@/components/sections/home/FaqSection";
+import { StatsSection } from "@/components/layout/StatsSection";
 import { FinalCta } from "@/components/layout/FinalCta";
 
 type Stat = { icon: string; value: number; suffix: string; label: string };
@@ -53,10 +54,8 @@ export default async function HomePage({
         subtitle={t.raw("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "/services" }}
-        stats={stats}
         followLabel={common("followUs")}
         showDoctor
-        showStatsBar
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}
         bg3DElement="brain"
@@ -73,6 +72,12 @@ export default async function HomePage({
       <VideosPreview />
       <ArticlesPreview />
       <FaqSection />
+      <StatsSection
+        stats={stats}
+        eyebrow={t("statsSection.eyebrow")}
+        title={t("statsSection.title")}
+        text={t("statsSection.text")}
+      />
       <FinalCta />
     </>
   );

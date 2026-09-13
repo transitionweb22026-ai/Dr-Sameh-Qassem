@@ -27,7 +27,7 @@ export function SectionHeading({
         <FadeIn direction="right">
           <div>
             {eyebrow ? (
-              <span className="text-brand-gold font-bold text-sm tracking-wider uppercase">
+              <span className="text-brand-gold font-bold text-base tracking-wider uppercase">
                 {eyebrow}
               </span>
             ) : null}
@@ -67,7 +67,7 @@ export function SectionHeading({
         )}
       >
         {eyebrow ? (
-          <span className="text-brand-gold font-bold text-sm tracking-wider uppercase">
+          <span className="text-brand-gold font-bold text-base tracking-wider uppercase">
             {eyebrow}
           </span>
         ) : null}

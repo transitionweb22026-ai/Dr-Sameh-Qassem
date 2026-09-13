@@ -9,7 +9,6 @@ import { FaqBlock } from "@/components/sections/shared/FaqBlock";
 import { FinalCta } from "@/components/layout/FinalCta";
 
 type Faq = { q: string; a: string };
-type Stat = { icon: string; value: number; suffix: string; label: string };
 
 export async function generateMetadata({
   params,
@@ -42,7 +41,6 @@ export default async function ContactPage({
   const common = await getTranslations({ locale, namespace: "common" });
 
   const faqItems = t.raw("faq.items") as Faq[];
-  const stats = t.raw("stats") as Stat[];
 
   return (
     <>
@@ -52,9 +50,7 @@ export default async function ContactPage({
         subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "tel:+201001234567" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#booking-form" }}
-        stats={stats}
         followLabel={common("followUs")}
-        showStatsBar={false}
         showDoctor
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}

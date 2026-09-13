@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildAlternates } from "@/lib/seo";
+import type { Discipline } from "@/lib/services";
 import { GlobalHeroSection } from "@/components/layout/GlobalHeroSection";
 import { DisciplinesGrid } from "@/components/sections/services/DisciplinesGrid";
+import { ConditionDetailsGrid } from "@/components/sections/services/ConditionDetailsGrid";
 import { WorkflowSteps } from "@/components/sections/services/WorkflowSteps";
 import { FaqBlock } from "@/components/sections/shared/FaqBlock";
 import { FinalCta } from "@/components/layout/FinalCta";
 
-type Discipline = { icon: string; title: string; text: string; conditions: string[] };
 type Step = { title: string; text: string };
 type Faq = { q: string; a: string };
-type Stat = { icon: string; value: number; suffix: string; label: string };
 
 export async function generateMetadata({
   params,
@@ -45,7 +45,6 @@ export default async function ServicesPage({
   const disciplines = t.raw("disciplinesSection.items") as Discipline[];
   const steps = t.raw("workflowSection.steps") as Step[];
   const faqs = t.raw("faqSection.items") as Faq[];
-  const stats = t.raw("stats") as Stat[];
 
   return (
     <>
@@ -55,9 +54,7 @@ export default async function ServicesPage({
         subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#disciplines" }}
-        stats={stats}
         followLabel={common("followUs")}
-        showStatsBar={false}
         showDoctor
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}
@@ -75,6 +72,11 @@ export default async function ServicesPage({
           items={disciplines}
         />
       </div>
+      <ConditionDetailsGrid
+        eyebrow={t("conditionsSection.eyebrow")}
+        title={t("conditionsSection.title")}
+        items={disciplines}
+      />
       <WorkflowSteps
         eyebrow={t("workflowSection.eyebrow")}
         title={t("workflowSection.title")}

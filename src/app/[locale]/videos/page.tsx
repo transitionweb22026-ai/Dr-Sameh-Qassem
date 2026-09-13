@@ -6,7 +6,6 @@ import { VideosGrid } from "@/components/sections/videos/VideosGrid";
 import { FinalCta } from "@/components/layout/FinalCta";
 
 type Video = { category: string; title: string; duration: string; videoUrl?: string };
-type Stat = { icon: string; value: number; suffix: string; label: string };
 
 export async function generateMetadata({
   params,
@@ -39,7 +38,6 @@ export default async function VideosPage({
   const common = await getTranslations({ locale, namespace: "common" });
 
   const items = t.raw("items") as Video[];
-  const stats = t.raw("stats") as Stat[];
 
   return (
     <>
@@ -49,9 +47,7 @@ export default async function VideosPage({
         subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#videos-grid" }}
-        stats={stats}
         followLabel={common("followUs")}
-        showStatsBar={false}
         showDoctor
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}

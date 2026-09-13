@@ -60,7 +60,7 @@ export function DoctorMessage({
           {/* Text column: reading-end (left in RTL, right in LTR); 7 of 12 columns */}
           <FadeIn direction="left" delay={0.1} className="lg:col-span-7 text-center lg:text-start">
             <div className="mb-4 flex items-center justify-center gap-3 lg:justify-start">
-              <span className="text-sm font-bold uppercase tracking-wider text-brand-gold">
+              <span className="text-base font-bold uppercase tracking-wider text-brand-gold">
                 {badgeLabel}
               </span>
               <span className="h-px w-12 bg-brand-gold/40" aria-hidden="true" />

@@ -61,7 +61,7 @@ export function BookingForm() {
 
   return (
     <GlassCard hover={false} className="p-6 sm:p-10 h-full flex flex-col">
-      <span className="text-brand-gold font-bold text-sm tracking-wider uppercase">
+      <span className="text-brand-gold font-bold text-base tracking-wider uppercase">
         {t("eyebrow")}
       </span>
       <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-forest font-tajawal mt-1 mb-3">

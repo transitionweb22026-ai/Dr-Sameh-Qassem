@@ -161,20 +161,24 @@
       "image": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1600&auto=format&fit=crop",
       "bullets": [
         {
+          "icon": "award",
           "title": "Consultant & Fellow of the Royal College of Surgeons",
           "text": "Holds an international fellowship in microsurgery and minimally invasive spinal fixation."
         },
         {
+          "icon": "microscope",
           "title": "Pioneer in Skull Base Endoscopy & Pituitary Tumor Resection",
           "text": "Uses advanced endonasal endoscopy with no external incision, fully preserving vital functions."
         },
         {
+          "icon": "heart",
           "title": "A Humane Approach to Comprehensive Care",
           "text": "Clear, simplified explanations for patients and families, with a personalized treatment plan and continuous follow-up."
         }
       ],
       "cta": "Learn More About Doctor",
-      "videoUrl": ""
+      "videoUrl": "",
+      "mainTitle": "About Dr. Sameh Qassem"
     },
     "surgeriesSection": {
       "eyebrow": "Our Specialties",
@@ -303,6 +307,11 @@
           "a": "We recommend bringing all previous scans (MRI or CT) along with medical reports and relevant lab results for an accurate assessment during your first consultation."
         }
       ]
+    },
+    "statsSection": {
+      "eyebrow": "By the Numbers",
+      "title": "A Track Record Built on Trust",
+      "text": "Real outcomes across thousands of cases, reflecting years of dedicated surgical excellence."
     }
   },
   "about": {
@@ -450,7 +459,12 @@
         "suffix": "",
         "label": "Countries Patients Travel From"
       }
-    ]
+    ],
+    "statsSection": {
+      "eyebrow": "Career at a Glance",
+      "title": "Experience Measured in Real Outcomes",
+      "text": "Milestones built over years of precise, dedicated surgical practice."
+    }
   },
   "services": {
     "hero": {
@@ -497,9 +511,18 @@
           "title": "Brain & Nerve Tumor Surgery",
           "text": "Diagnosis and treatment of brain and spinal cord tumors using state-of-the-art neuronavigation.",
           "conditions": [
-            "Benign & malignant brain tumors",
-            "Spinal cord tumors",
-            "Brain cysts & congenital malformations"
+            {
+              "title": "Benign & malignant brain tumors",
+              "text": "Comprehensive evaluation and surgical removal of tumors ranging from slow-growing benign growths to more aggressive malignant tumors, using techniques tailored to preserve healthy brain function."
+            },
+            {
+              "title": "Spinal cord tumors",
+              "text": "Precise microsurgical removal of tumors within or around the spinal cord, aimed at relieving pressure on nerve tissue while protecting motor and sensory function."
+            },
+            {
+              "title": "Brain cysts & congenital malformations",
+              "text": "Diagnosis and treatment of fluid-filled cysts and structural brain abnormalities present from birth, with a focus on long-term neurological development and safety."
+            }
           ]
         },
         {
@@ -507,9 +530,18 @@
           "title": "Spine Surgery",
           "text": "Comprehensive treatment for neck and back pain through minimally invasive intervention and spinal fixation.",
           "conditions": [
-            "Lumbar & cervical disc herniation",
-            "Spinal canal stenosis",
-            "Spondylolisthesis & instability"
+            {
+              "title": "Lumbar & cervical disc herniation",
+              "text": "Relief of nerve compression caused by a herniated disc in the lower back or neck, through conservative care or minimally invasive surgical correction when needed."
+            },
+            {
+              "title": "Spinal canal stenosis",
+              "text": "Treatment of the narrowing of the spinal canal that compresses the spinal cord and nerves, restoring space through decompression techniques."
+            },
+            {
+              "title": "Spondylolisthesis & instability",
+              "text": "Stabilization of vertebrae that have slipped out of proper alignment, using fixation techniques that restore spinal stability and reduce pain."
+            }
           ]
         },
         {
@@ -517,9 +549,18 @@
           "title": "Endoscopic Skull Base Surgery",
           "text": "Resection of pituitary and skull base tumors without traditional open surgery.",
           "conditions": [
-            "Pituitary tumors",
-            "Acoustic neuromas",
-            "Cerebrospinal fluid leaks"
+            {
+              "title": "Pituitary tumors",
+              "text": "Endonasal endoscopic removal of tumors affecting the pituitary gland, preserving hormonal function and avoiding open skull surgery."
+            },
+            {
+              "title": "Acoustic neuromas",
+              "text": "Careful microsurgical or endoscopic removal of benign tumors on the hearing and balance nerve, with close attention to preserving hearing and facial nerve function."
+            },
+            {
+              "title": "Cerebrospinal fluid leaks",
+              "text": "Precise endoscopic repair of leaks in the membrane surrounding the brain, preventing infection and restoring normal cerebrospinal fluid pressure."
+            }
           ]
         },
         {
@@ -527,9 +568,18 @@
           "title": "Minimally Invasive Microsurgical Techniques",
           "text": "Precision micro-instruments and endoscopic tools enable smaller incisions, less tissue disruption, and faster recovery across a wide range of neurosurgical procedures.",
           "conditions": [
-            "Endoscopic-assisted procedures",
-            "Micro-instrument techniques",
-            "Faster postoperative recovery"
+            {
+              "title": "Endoscopic-assisted procedures",
+              "text": "Advanced endoscopic corridors that reach deep-seated conditions through minimal openings, reducing trauma to surrounding tissue."
+            },
+            {
+              "title": "Micro-instrument techniques",
+              "text": "Specialized micro-instruments that allow exceptional precision in tight surgical fields, improving safety around delicate structures."
+            },
+            {
+              "title": "Faster postoperative recovery",
+              "text": "A surgical approach designed around shorter hospital stays and a quicker return to daily activities."
+            }
           ]
         },
         {
@@ -537,9 +587,18 @@
           "title": "Epilepsy & Nerve Pain Treatment",
           "text": "Surgical and non-surgical solutions for refractory epilepsy and chronic nerve pain.",
           "conditions": [
-            "Drug-resistant epilepsy",
-            "Trigeminal neuralgia",
-            "Involuntary spasms"
+            {
+              "title": "Drug-resistant epilepsy",
+              "text": "Surgical evaluation and treatment for seizures that continue despite appropriate medication, aimed at reducing or eliminating seizure activity."
+            },
+            {
+              "title": "Trigeminal neuralgia",
+              "text": "Targeted treatment for severe facial nerve pain, ranging from non-surgical options to microvascular decompression for lasting relief."
+            },
+            {
+              "title": "Involuntary spasms",
+              "text": "Diagnosis and management of chronic muscle spasms and involuntary movements linked to nerve irritation or compression."
+            }
           ]
         }
       ]
@@ -607,6 +666,10 @@
           "a": "Yes, we provide all medical reports and correspondence in both Arabic and English to facilitate communication with insurance companies or overseas treatment centers."
         }
       ]
+    },
+    "conditionsSection": {
+      "eyebrow": "Condition by Condition",
+      "title": "A Closer Look at What We Treat"
     }
   },
   "reviews": {

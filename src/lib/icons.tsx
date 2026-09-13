@@ -13,6 +13,7 @@ import {
   Skull,
   Bone,
   Microscope,
+  Heart,
   type LucideIcon,
   type LucideProps,
 } from "lucide-react";
@@ -32,6 +33,7 @@ export const iconMap: Record<string, LucideIcon> = {
   skull: Skull,
   bone: Bone,
   microscope: Microscope,
+  heart: Heart,
 };
 
 export function getIcon(key: string): LucideIcon {

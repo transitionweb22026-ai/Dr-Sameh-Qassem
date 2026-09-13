@@ -31,7 +31,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-brand-gold uppercase tracking-wider">
+            <h4 className="text-base font-bold text-brand-gold uppercase tracking-wider">
               {t("quickLinks")}
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-brand-100/80">
@@ -46,7 +46,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-brand-gold uppercase tracking-wider">
+            <h4 className="text-base font-bold text-brand-gold uppercase tracking-wider">
               {t("patientGuides")}
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-brand-100/80">
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-brand-gold uppercase tracking-wider">
+            <h4 className="text-base font-bold text-brand-gold uppercase tracking-wider">
               {t("branches")}
             </h4>
             <div className="space-y-3 text-xs text-brand-100/80">

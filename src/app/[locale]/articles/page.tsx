@@ -7,8 +7,6 @@ import { FeaturedArticle } from "@/components/sections/articles/FeaturedArticle"
 import { ArticlesGrid } from "@/components/sections/articles/ArticlesGrid";
 import { FinalCta } from "@/components/layout/FinalCta";
 
-type Stat = { icon: string; value: number; suffix: string; label: string };
-
 export async function generateMetadata({
   params,
 }: {
@@ -41,7 +39,6 @@ export default async function ArticlesPage({
 
   const featured = t.raw("featured") as Article;
   const items = t.raw("items") as Article[];
-  const stats = t.raw("stats") as Stat[];
 
   return (
     <>
@@ -51,9 +48,7 @@ export default async function ArticlesPage({
         subtitle={t("hero.subtitle")}
         primaryCta={{ label: t("hero.primaryCta"), href: "/contact" }}
         secondaryCta={{ label: t("hero.secondaryCta"), href: "#articles-grid" }}
-        stats={stats}
         followLabel={common("followUs")}
-        showStatsBar={false}
         showDoctor
         doctorImage={t("hero.image")}
         doctorImageAlt={t("hero.title")}
