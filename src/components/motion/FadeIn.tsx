@@ -20,7 +20,7 @@ export function FadeIn({
   duration = 0.6,
   className,
   once = true,
-  amount = 0.2,
+  amount = 0,
 }: {
   children: ReactNode;
   direction?: Direction;

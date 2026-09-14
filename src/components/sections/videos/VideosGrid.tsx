@@ -1,11 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { Play } from "lucide-react";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { useVideoModal } from "@/components/ui/VideoModal";
 
-type Video = { category: string; title: string; duration: string; videoUrl?: string };
+type Video = { category: string; title: string; duration: string; videoUrl?: string; image?: string };
 
 export function VideosGrid({ items }: { items: Video[] }) {
   const { openVideo } = useVideoModal();
@@ -44,7 +45,20 @@ export function VideosGrid({ items }: { items: Video[] }) {
                 aria-label={video.title}
                 className="group relative block w-full rounded-3xl overflow-hidden aspect-[9/16] bg-brand-forest shadow-luxury text-start"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-700/70 via-brand-900/80 to-brand-deep group-hover:scale-105 transition-transform duration-500" />
+                {video.image ? (
+                  <>
+                    <Image
+                      src={video.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 25vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors" />
+                  </>
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-700/70 via-brand-900/80 to-brand-deep group-hover:scale-105 transition-transform duration-500" />
+                )}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="absolute w-16 h-16 rounded-full bg-brand-gold/40 blur-xl group-hover:bg-brand-gold/60 transition-all" />
                   <span className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-gold text-brand-forest flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">

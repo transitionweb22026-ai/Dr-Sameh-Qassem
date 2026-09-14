@@ -26,14 +26,9 @@ export function SectionHeading({
       >
         <FadeIn direction="right">
           <div>
-            {eyebrow ? (
-              <span className="text-brand-gold font-bold text-base tracking-wider uppercase">
-                {eyebrow}
-              </span>
-            ) : null}
             <h2
               className={cn(
-                "text-3xl sm:text-4xl font-extrabold font-tajawal mt-1",
+                "text-3xl sm:text-4xl font-extrabold font-tajawal",
                 tone === "dark" ? "text-white" : "text-brand-forest"
               )}
             >
@@ -66,11 +61,6 @@ export function SectionHeading({
           className
         )}
       >
-        {eyebrow ? (
-          <span className="text-brand-gold font-bold text-base tracking-wider uppercase">
-            {eyebrow}
-          </span>
-        ) : null}
         <h2
           className={cn(
             "text-3xl sm:text-4xl font-black font-tajawal text-balance",

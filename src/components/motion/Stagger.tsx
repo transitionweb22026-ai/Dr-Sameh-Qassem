@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 export function StaggerGroup({
   children,
   className,
-  amount = 0.2,
+  amount = 0,
   gap = 0.12,
   once = true,
 }: {

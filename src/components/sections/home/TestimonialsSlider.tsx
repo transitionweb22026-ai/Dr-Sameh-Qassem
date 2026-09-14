@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -13,9 +12,8 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 type Review = {
   name: string;
-  location: string;
-  procedure: string;
-  category: string;
+  location?: string;
+  procedure?: string;
   rating: number;
   text: string;
 };
@@ -28,14 +26,23 @@ function initials(name: string) {
     .join("");
 }
 
-export function TestimonialsSlider() {
-  const t = useTranslations("home.testimonialsSection");
-  const reviewsT = useTranslations("reviews");
-  const allItems = reviewsT.raw("items") as Review[];
+export function TestimonialsSlider({
+  eyebrow,
+  title,
+  text,
+  cta,
+  items,
+}: {
+  eyebrow: string;
+  title: string;
+  text?: string;
+  cta: string;
+  items: Review[];
+}) {
   const groupSize = 3;
   const groups: Review[][] = [];
-  for (let i = 0; i < allItems.length; i += groupSize) {
-    groups.push(allItems.slice(i, i + groupSize));
+  for (let i = 0; i < items.length; i += groupSize) {
+    groups.push(items.slice(i, i + groupSize));
   }
 
   const [index, setIndex] = useState(0);
@@ -53,7 +60,7 @@ export function TestimonialsSlider() {
     <section className="py-24 bg-brand-ivory relative overflow-hidden" id="testimonials">
       <AmbientGlow />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <SectionHeading eyebrow={t("eyebrow")} title={t("title")} text={t("text")} />
+        <SectionHeading eyebrow={eyebrow} title={title} text={text} />
 
         <div
           onMouseEnter={() => setPaused(true)}
@@ -84,7 +91,7 @@ export function TestimonialsSlider() {
                     <div>
                       <h3 className="text-sm font-bold text-brand-forest">{review.name}</h3>
                       <span className="text-xs text-brand-700">
-                        {review.location} • {review.procedure}
+                        {[review.location, review.procedure].filter(Boolean).join(" • ")}
                       </span>
                     </div>
                   </div>
@@ -115,7 +122,7 @@ export function TestimonialsSlider() {
               href="/reviews"
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-brand-forest text-white font-bold text-sm hover:bg-brand-900 transition-all duration-300 shadow-xl hover:scale-105 border border-emerald-700/30"
             >
-              <span>{t("cta")}</span>
+              <span>{cta}</span>
               <ArrowRight className="w-4 h-4 text-brand-gold rtl:rotate-180" />
             </Link>
           </div>

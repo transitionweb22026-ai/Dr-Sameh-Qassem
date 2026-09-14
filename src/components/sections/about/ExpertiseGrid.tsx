@@ -4,14 +4,14 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
-const images = [
+const fallbackImages = [
   "/images/brain.png",
   "/images/spine.png",
   "/images/pediatric.png",
   "/images/nerves.png",
 ];
 
-type Item = { title: string; text: string };
+type Item = { title: string; text: string; image?: string };
 
 export function ExpertiseGrid({
   eyebrow,
@@ -33,7 +33,7 @@ export function ExpertiseGrid({
               <GlassCard className="overflow-hidden h-full flex flex-col group">
                 <div className="relative h-36 sm:h-40 w-full overflow-hidden bg-brand-forest/5">
                   <Image
-                    src={images[index % images.length]}
+                    src={item.image || fallbackImages[index % fallbackImages.length]}
                     alt={item.title}
                     fill
                     sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

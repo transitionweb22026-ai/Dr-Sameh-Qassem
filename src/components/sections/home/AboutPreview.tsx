@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
@@ -13,10 +12,21 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 
 type Bullet = { icon: string; title: string; text: string };
 
-export function AboutPreview() {
-  const t = useTranslations("home.about");
-  const bullets = t.raw("bullets") as Bullet[];
-  const videoUrl = t("videoUrl");
+export function AboutPreview({
+  eyebrow,
+  image,
+  mainTitle,
+  bullets,
+  cta,
+  videoUrl,
+}: {
+  eyebrow: string;
+  image: string;
+  mainTitle: string;
+  bullets: Bullet[];
+  cta: string;
+  videoUrl?: string;
+}) {
   const { openVideo } = useVideoModal();
 
   return (
@@ -27,25 +37,25 @@ export function AboutPreview() {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16">
             <div className="group relative w-full aspect-[805/452] overflow-hidden rounded-3xl shadow-2xl">
               <Image
-                src={t("image")}
-                alt={t("eyebrow")}
+                src={image}
+                alt={eyebrow}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-brand-deep/20 flex items-center justify-center">
                 <PlayButton
-                  label={t("eyebrow")}
+                  label={eyebrow}
                   variant="glass"
                   size="lg"
-                  onClick={() => openVideo(videoUrl, t("eyebrow"))}
+                  onClick={() => openVideo(videoUrl, eyebrow)}
                 />
               </div>
             </div>
 
             <div className="flex flex-col justify-center gap-6 py-4">
               <h2 className="font-tajawal text-2xl sm:text-3xl lg:text-4xl font-black leading-snug text-brand-gold text-balance">
-                {t("mainTitle")}
+                {mainTitle}
               </h2>
 
               <StaggerGroup className="space-y-5">
@@ -72,7 +82,7 @@ export function AboutPreview() {
                 href="/about"
                 className="inline-flex w-fit items-center gap-2.5 rounded-full bg-brand-forest px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-900 hover:scale-105 shadow-lg"
               >
-                <span>{t("cta")}</span>
+                <span>{cta}</span>
                 <ArrowRight className="h-4 w-4 text-brand-gold rtl:rotate-180" />
               </Link>
             </div>

@@ -48,6 +48,7 @@ export function GlobalHeroSection({
   doctorImageAlt,
   bg3DElement = "brain",
   bookingCard,
+  reserveOverlapSpace = false,
 }: {
   title: string;
   titleHighlight: string;
@@ -60,14 +61,17 @@ export function GlobalHeroSection({
   doctorImageAlt?: string;
   bg3DElement?: string;
   bookingCard?: BookingCard;
+  /** Reserves extra guaranteed empty space at the bottom (lg:+ only) for a
+   * floating element — like a stats bar — to overlap into without ever
+   * covering the hero's own text/CTAs, regardless of viewport aspect ratio. */
+  reserveOverlapSpace?: boolean;
 }) {
   return (
     <section
       className={cn(
         "relative overflow-hidden bg-brand-ivory pt-28 pb-8 sm:pt-32",
-        showDoctor && doctorImage
-          ? "min-h-[560px] sm:min-h-[600px] lg:flex lg:min-h-[680px] lg:flex-col lg:justify-center"
-          : ""
+        showDoctor && doctorImage ? "flex min-h-screen flex-col justify-center" : "",
+        reserveOverlapSpace ? "lg:pb-24" : ""
       )}
     >
       {/* Doctor portrait as a full-bleed background layer, edge to edge */}

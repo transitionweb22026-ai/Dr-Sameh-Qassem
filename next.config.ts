@@ -17,6 +17,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        // Supabase Storage public URLs (cms-media bucket). Self-hosted or
+        // custom-domain Supabase projects should replace this pattern with
+        // their actual storage hostname.
+        protocol: "https",
+        hostname: "*.supabase.co",
+      },
+      {
+        // Auto-derived YouTube video thumbnails (see src/lib/video.ts).
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
     ],
   },
 };

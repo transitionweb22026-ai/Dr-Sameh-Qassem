@@ -25,13 +25,8 @@ export function LegalHero({
         aria-hidden="true"
       />
       <div className="relative z-10 mx-auto max-w-3xl px-4 pt-10 text-center sm:px-6 sm:pt-14 lg:px-8">
-        <FadeIn>
-          <span className="text-base font-bold uppercase tracking-wider text-brand-gold">
-            {eyebrow}
-          </span>
-        </FadeIn>
         <FadeIn delay={0.05}>
-          <h1 className="mt-3 text-3xl font-black leading-tight tracking-tight text-balance text-white font-tajawal sm:text-5xl">
+          <h1 className="text-3xl font-black leading-tight tracking-tight text-balance text-white font-tajawal sm:text-5xl">
             {title}{" "}
             <span className="bg-gradient-to-l from-brand-goldLight via-brand-gold to-white bg-clip-text text-transparent">
               {titleHighlight}

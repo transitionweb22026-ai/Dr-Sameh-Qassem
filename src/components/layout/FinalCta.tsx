@@ -8,15 +8,19 @@ import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 export function FinalCta({
   title,
+  titleHighlight,
   text,
 }: {
   /** Page-tailored plain headline. Falls back to the default titleLine1 + gold-highlighted name. */
   title?: string;
+  /** Gold-highlighted portion that follows `title`. Only used together with a custom `title`. */
+  titleHighlight?: string;
   /** Page-tailored supporting copy. Falls back to the default subtitle. */
   text?: string;
 } = {}) {
   const t = useTranslations("finalCta");
   const common = useTranslations("common");
+  const hasCustomTitle = title !== undefined;
 
   return (
     <section className="py-24 bg-brand-forest text-white relative overflow-hidden">
@@ -31,7 +35,19 @@ export function FinalCta({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         <FadeIn>
           <h2 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black font-tajawal text-white leading-tight tracking-tight text-balance">
-            {title ?? (
+            {hasCustomTitle ? (
+              <>
+                {title}
+                {titleHighlight ? (
+                  <>
+                    {" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-l from-brand-goldLight via-brand-gold to-white">
+                      {titleHighlight}
+                    </span>
+                  </>
+                ) : null}
+              </>
+            ) : (
               <>
                 {t("titleLine1")}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-l from-brand-goldLight via-brand-gold to-white">

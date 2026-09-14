@@ -100,6 +100,29 @@ export function Footer() {
           </div>
         </div>
 
+        <div className="flex justify-center py-8">
+          <a
+            href="https://transitioneg.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            dir="ltr"
+            className="group inline-flex items-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-brand-forest via-brand-600 to-brand-gold px-4 py-2 sm:px-6 sm:py-3 shadow-lg shadow-black/30 transition-transform duration-300 hover:scale-105"
+          >
+            <span className="text-xs sm:text-sm font-extrabold text-white whitespace-nowrap">
+              Transition
+            </span>
+            <span className="relative h-5 w-5 sm:h-6 sm:w-6 shrink-0">
+              <Image src="/images/logo-01.png" alt="Transition" fill sizes="24px" className="object-contain" />
+            </span>
+            <span
+              className="text-xs sm:text-sm font-bold text-white/90 whitespace-nowrap"
+              dir={locale === "ar" ? "rtl" : "ltr"}
+            >
+              {locale === "ar" ? "تصميم وتطوير" : "Design & Development"}
+            </span>
+          </a>
+        </div>
+
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-100/60">
           <p>{t("copyright", { year })}</p>
           <div className="flex items-center gap-6">

@@ -27,10 +27,7 @@ export function WideVideoPlayer({
       <AmbientGlow />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <FadeIn>
-          <span className="text-brand-gold font-bold text-base tracking-wider uppercase">
-            {eyebrow}
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-forest font-tajawal mt-1 text-balance">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-forest font-tajawal text-balance">
             {title}
           </h2>
           {text ? (
