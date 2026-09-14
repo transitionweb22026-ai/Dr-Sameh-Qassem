@@ -4,6 +4,7 @@ import { DynamicIcon } from "@/lib/icons";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { InstagramIcon, FacebookIcon, TikTokIcon } from "@/components/ui/SocialIcons";
 import { siteConfig } from "@/lib/site-config";
+import { getSiteSettings } from "@/lib/controllers/siteSettings";
 import { cn } from "@/lib/utils";
 
 type Cta = { label: string; href: string };
@@ -36,7 +37,7 @@ function CtaLink({
   );
 }
 
-export function GlobalHeroSection({
+export async function GlobalHeroSection({
   title,
   titleHighlight,
   subtitle,
@@ -66,6 +67,19 @@ export function GlobalHeroSection({
    * covering the hero's own text/CTAs, regardless of viewport aspect ratio. */
   reserveOverlapSpace?: boolean;
 }) {
+  // Admin-editable in /admin/dashboard/settings; falls back to the static
+  // defaults if the settings row can't be reached so the hero never breaks.
+  const settingsResult = await getSiteSettings();
+  const contact = settingsResult.ok
+    ? settingsResult.data
+    : {
+        phone_display: siteConfig.phoneDisplay,
+        phone_href: siteConfig.phoneHref,
+        facebook_url: siteConfig.social.facebook as string | null,
+        instagram_url: siteConfig.social.instagram as string | null,
+        tiktok_url: siteConfig.social.tiktok as string | null,
+      };
+
   return (
     <section
       className={cn(
@@ -214,48 +228,54 @@ export function GlobalHeroSection({
 
               <div className="mt-4 space-y-3 border-t border-brand-900/10 pt-3">
                 <a
-                  href={siteConfig.phoneHref}
+                  href={contact.phone_href}
                   className="flex items-center gap-2.5 text-xs font-bold text-brand-forest transition-colors hover:text-brand-gold"
                 >
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold">
                     <Phone className="h-3 w-3" strokeWidth={1.8} />
                   </span>
-                  <span dir="ltr">{siteConfig.phoneDisplay}</span>
+                  <span dir="ltr">{contact.phone_display}</span>
                 </a>
 
-                {followLabel ? (
+                {followLabel && (contact.facebook_url || contact.instagram_url || contact.tiktok_url) ? (
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-semibold uppercase tracking-wider text-brand-700/60">
                       {followLabel}
                     </span>
                     <div className="flex items-center gap-1.5">
-                      <a
-                        href={siteConfig.social.facebook}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Facebook"
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
-                      >
-                        <FacebookIcon className="h-3 w-3" />
-                      </a>
-                      <a
-                        href={siteConfig.social.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Instagram"
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
-                      >
-                        <InstagramIcon className="h-3 w-3" />
-                      </a>
-                      <a
-                        href={siteConfig.social.tiktok}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="TikTok"
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
-                      >
-                        <TikTokIcon className="h-3 w-3" />
-                      </a>
+                      {contact.facebook_url ? (
+                        <a
+                          href={contact.facebook_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Facebook"
+                          className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
+                        >
+                          <FacebookIcon className="h-3 w-3" />
+                        </a>
+                      ) : null}
+                      {contact.instagram_url ? (
+                        <a
+                          href={contact.instagram_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Instagram"
+                          className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
+                        >
+                          <InstagramIcon className="h-3 w-3" />
+                        </a>
+                      ) : null}
+                      {contact.tiktok_url ? (
+                        <a
+                          href={contact.tiktok_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="TikTok"
+                          className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-forest/5 text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white"
+                        >
+                          <TikTokIcon className="h-3 w-3" />
+                        </a>
+                      ) : null}
                     </div>
                   </div>
                 ) : null}

@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { LayoutDashboard, FileText } from "lucide-react";
+import { LayoutDashboard, FileText, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Page } from "@/lib/cms-types";
 
@@ -54,6 +54,23 @@ export function Sidebar({ pages }: { pages: Page[] }) {
           );
         })}
       </nav>
+
+      <div className="mt-4 mb-1 px-3 text-[11px] font-bold uppercase tracking-wider text-brand-700/60">
+        Site-wide
+      </div>
+      <Link
+        href="/admin/dashboard/settings"
+        prefetch={false}
+        className={cn(
+          "flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors",
+          pathname === "/admin/dashboard/settings"
+            ? "bg-brand-forest text-white"
+            : "text-brand-800 hover:bg-brand-100/60"
+        )}
+      >
+        <Settings className="h-4 w-4 shrink-0" />
+        Contact & Social
+      </Link>
     </aside>
   );
 }

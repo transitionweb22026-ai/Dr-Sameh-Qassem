@@ -168,9 +168,9 @@ export default async function HomePage({
         doctorImageAlt={hero ? pickLocale(locale, hero.title_en, hero.title_ar) : ""}
         bg3DElement={hero?.bg_3d_element ?? "brain"}
         bookingCard={{
-          title: common("bookingCard.title"),
-          text: common("bookingCard.text"),
-          cta: common("bookingCard.cta"),
+          title: (hero ? pickLocale(locale, hero.booking_card_title_en, hero.booking_card_title_ar) : "") || common("bookingCard.title"),
+          text: (hero ? pickLocale(locale, hero.booking_card_text_en, hero.booking_card_text_ar) : "") || common("bookingCard.text"),
+          cta: (hero ? pickLocale(locale, hero.booking_card_cta_en, hero.booking_card_cta_ar) : "") || common("bookingCard.cta"),
         }}
         reserveOverlapSpace
       />

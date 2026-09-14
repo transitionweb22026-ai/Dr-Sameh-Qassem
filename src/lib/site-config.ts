@@ -43,9 +43,9 @@ export const navLinks = [
   { href: "/contact", key: "contact" },
 ] as const;
 
-export function buildWhatsAppLink(message: string) {
+export function buildWhatsAppLink(message: string, whatsappNumber: string = siteConfig.whatsappNumber) {
   const encoded = encodeURIComponent(message);
-  return `https://wa.me/${siteConfig.whatsappNumber}?text=${encoded}`;
+  return `https://wa.me/${whatsappNumber}?text=${encoded}`;
 }
 
 export function buildDirectionsLink(query: string) {

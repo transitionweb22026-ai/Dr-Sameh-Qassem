@@ -4,7 +4,7 @@ import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { navLinks, siteConfig } from "@/lib/site-config";
 
-export function Footer() {
+export function Footer({ phoneDisplay }: { phoneDisplay: string }) {
   const t = useTranslations("footer");
   const nav = useTranslations("nav");
   const locale = useLocale() as "ar" | "en";
@@ -93,7 +93,7 @@ export function Footer() {
                 <Phone className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" strokeWidth={1.8} />
                 <p>
                   <strong className="text-white">{t("phoneLabel")}</strong>{" "}
-                  <span dir="ltr">{siteConfig.phoneDisplay}</span>
+                  <span dir="ltr">{phoneDisplay}</span>
                 </p>
               </div>
             </div>

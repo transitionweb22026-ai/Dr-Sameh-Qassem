@@ -1,4 +1,4 @@
-export type Condition = { title: string; text: string };
+export type Condition = { title: string; text: string; image?: string };
 
 export type Discipline = {
   icon: string;

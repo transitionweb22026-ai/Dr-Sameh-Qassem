@@ -20,8 +20,9 @@ export function sectionHeading(locale: string, section: Section | undefined) {
  * was cleared) leaves `title` as `undefined` so the component's own
  * generic default kicks in, rather than rendering a blank headline. */
 export function finalCtaProps(locale: string, section: Section | undefined) {
-  if (!section) return {};
+  if (!section) return { locale };
   return {
+    locale,
     title: pickLocale(locale, section.title_en, section.title_ar) || undefined,
     titleHighlight: pickLocale(locale, section.title_highlight_en, section.title_highlight_ar) || undefined,
     text: pickLocale(locale, section.text_en, section.text_ar) || undefined,

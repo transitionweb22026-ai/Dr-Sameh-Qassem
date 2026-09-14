@@ -28,6 +28,12 @@ const emptyHero: HeroInput = {
   show_stats_bar: false,
   follow_label_en: "",
   follow_label_ar: "",
+  booking_card_title_en: "",
+  booking_card_title_ar: "",
+  booking_card_text_en: "",
+  booking_card_text_ar: "",
+  booking_card_cta_en: "",
+  booking_card_cta_ar: "",
 };
 
 export function HeroEditorForm({ pageId, pageSlug, hero }: { pageId: string; pageSlug: string; hero: PageHero | null }) {
@@ -54,6 +60,12 @@ export function HeroEditorForm({ pageId, pageSlug, hero }: { pageId: string; pag
           show_stats_bar: hero.show_stats_bar,
           follow_label_en: hero.follow_label_en ?? "",
           follow_label_ar: hero.follow_label_ar ?? "",
+          booking_card_title_en: hero.booking_card_title_en ?? "",
+          booking_card_title_ar: hero.booking_card_title_ar ?? "",
+          booking_card_text_en: hero.booking_card_text_en ?? "",
+          booking_card_text_ar: hero.booking_card_text_ar ?? "",
+          booking_card_cta_en: hero.booking_card_cta_en ?? "",
+          booking_card_cta_ar: hero.booking_card_cta_ar ?? "",
         }
       : emptyHero
   );
@@ -140,6 +152,53 @@ export function HeroEditorForm({ pageId, pageSlug, hero }: { pageId: string; pag
         <Field label="Follow label (English)" value={draft.follow_label_en ?? ""} onChange={(v) => set("follow_label_en", v)} placeholder="Follow us" />
         <Field label="Follow label (Arabic)" value={draft.follow_label_ar ?? ""} onChange={(v) => set("follow_label_ar", v)} dir="rtl" />
       </Row>
+
+      <div className="space-y-3 rounded-xl border border-brand-900/10 bg-white/40 p-4">
+        <h4 className="text-xs font-bold uppercase tracking-wide text-brand-forest">
+          Booking card (the floating card on the hero)
+        </h4>
+        <Row>
+          <Field
+            label="Card title (English)"
+            value={draft.booking_card_title_en ?? ""}
+            onChange={(v) => set("booking_card_title_en", v)}
+            placeholder="Book an Appointment"
+          />
+          <Field
+            label="Card title (Arabic)"
+            value={draft.booking_card_title_ar ?? ""}
+            onChange={(v) => set("booking_card_title_ar", v)}
+            dir="rtl"
+          />
+        </Row>
+        <Row>
+          <TextArea
+            label="Card text (English)"
+            value={draft.booking_card_text_en ?? ""}
+            onChange={(v) => set("booking_card_text_en", v)}
+          />
+          <TextArea
+            label="Card text (Arabic)"
+            value={draft.booking_card_text_ar ?? ""}
+            onChange={(v) => set("booking_card_text_ar", v)}
+            dir="rtl"
+          />
+        </Row>
+        <Row>
+          <Field
+            label="Button label (English)"
+            value={draft.booking_card_cta_en ?? ""}
+            onChange={(v) => set("booking_card_cta_en", v)}
+            placeholder="Book Now"
+          />
+          <Field
+            label="Button label (Arabic)"
+            value={draft.booking_card_cta_ar ?? ""}
+            onChange={(v) => set("booking_card_cta_ar", v)}
+            dir="rtl"
+          />
+        </Row>
+      </div>
 
       <div className="flex items-center gap-3">
         <button

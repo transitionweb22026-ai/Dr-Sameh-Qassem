@@ -93,6 +93,7 @@ export default async function ServicesPage({
         .map((child) => ({
           title: pickLocale(locale, child.title_en, child.title_ar),
           text: pickLocale(locale, child.text_en, child.text_ar),
+          image: child.icon ?? undefined,
         })),
     }));
 
@@ -130,9 +131,9 @@ export default async function ServicesPage({
         doctorImageAlt={hero ? pickLocale(locale, hero.title_en, hero.title_ar) : ""}
         bg3DElement={hero?.bg_3d_element ?? "bone"}
         bookingCard={{
-          title: common("bookingCard.title"),
-          text: common("bookingCard.text"),
-          cta: common("bookingCard.cta"),
+          title: (hero ? pickLocale(locale, hero.booking_card_title_en, hero.booking_card_title_ar) : "") || common("bookingCard.title"),
+          text: (hero ? pickLocale(locale, hero.booking_card_text_en, hero.booking_card_text_ar) : "") || common("bookingCard.text"),
+          cta: (hero ? pickLocale(locale, hero.booking_card_cta_en, hero.booking_card_cta_ar) : "") || common("bookingCard.cta"),
         }}
       />
       <div id="disciplines">

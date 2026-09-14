@@ -29,6 +29,12 @@ export type PageHero = {
   show_stats_bar: boolean;
   follow_label_en: string | null;
   follow_label_ar: string | null;
+  booking_card_title_en: string | null;
+  booking_card_title_ar: string | null;
+  booking_card_text_en: string | null;
+  booking_card_text_ar: string | null;
+  booking_card_cta_en: string | null;
+  booking_card_cta_ar: string | null;
 };
 
 export type HeroInput = Omit<PageHero, "id" | "page_id">;

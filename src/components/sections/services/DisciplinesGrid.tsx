@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
-import { getCardImage } from "@/lib/icons";
+import { getCardImage, isIconImage } from "@/lib/icons";
 import type { Discipline } from "@/lib/services";
 
 export function DisciplinesGrid({
@@ -28,7 +28,7 @@ export function DisciplinesGrid({
               <GlassCard className="overflow-hidden h-full flex flex-col group">
                 <div className="relative h-44 sm:h-48 w-full overflow-hidden bg-brand-forest/5">
                   <Image
-                    src={getCardImage(item.icon) ?? "/images/brain.png"}
+                    src={isIconImage(item.icon) ? item.icon : getCardImage(item.icon) ?? "/images/brain.png"}
                     alt={item.title}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

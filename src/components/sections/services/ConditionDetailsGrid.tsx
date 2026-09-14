@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { AmbientGlow } from "@/components/ui/AmbientGlow";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
-import { getCardImage } from "@/lib/icons";
+import { getCardImage, isIconImage } from "@/lib/icons";
 import type { Discipline } from "@/lib/services";
 
 export function ConditionDetailsGrid({
@@ -37,7 +37,11 @@ export function ConditionDetailsGrid({
                     <GlassCard className="overflow-hidden h-full flex flex-col group">
                       <div className="relative h-36 sm:h-40 w-full overflow-hidden bg-brand-forest/5">
                         <Image
-                          src={getCardImage(group.icon) ?? "/images/brain.png"}
+                          src={
+                            condition.image ||
+                            (isIconImage(group.icon) ? group.icon : getCardImage(group.icon)) ||
+                            "/images/brain.png"
+                          }
                           alt={condition.title}
                           fill
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

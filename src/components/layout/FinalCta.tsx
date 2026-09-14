@@ -1,26 +1,32 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import { getSiteSettings } from "@/lib/controllers/siteSettings";
 import { FadeIn } from "@/components/motion/FadeIn";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
-export function FinalCta({
+export async function FinalCta({
+  locale,
   title,
   titleHighlight,
   text,
 }: {
+  locale: string;
   /** Page-tailored plain headline. Falls back to the default titleLine1 + gold-highlighted name. */
   title?: string;
   /** Gold-highlighted portion that follows `title`. Only used together with a custom `title`. */
   titleHighlight?: string;
   /** Page-tailored supporting copy. Falls back to the default subtitle. */
   text?: string;
-} = {}) {
-  const t = useTranslations("finalCta");
-  const common = useTranslations("common");
+}) {
+  const t = await getTranslations({ locale, namespace: "finalCta" });
+  const common = await getTranslations({ locale, namespace: "common" });
   const hasCustomTitle = title !== undefined;
+
+  const settingsResult = await getSiteSettings();
+  const contact = settingsResult.ok
+    ? settingsResult.data
+    : { phone_href: siteConfig.phoneHref, whatsapp_number: siteConfig.whatsappNumber };
 
   return (
     <section className="py-24 bg-brand-forest text-white relative overflow-hidden">
@@ -65,14 +71,14 @@ export function FinalCta({
         <FadeIn delay={0.2}>
           <div className="flex flex-wrap items-center justify-center gap-5 pt-4">
             <a
-              href={siteConfig.phoneHref}
+              href={contact.phone_href}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white text-brand-forest font-extrabold text-base hover:bg-brand-50 transition-all duration-300 shadow-2xl hover:scale-105 border border-white/80"
             >
               <Phone className="w-5 h-5 text-brand-forest" />
               <span>{common("contactUs")}</span>
             </a>
             <a
-              href={`https://wa.me/${siteConfig.whatsappNumber}`}
+              href={`https://wa.me/${contact.whatsapp_number}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base transition-all duration-300 shadow-2xl hover:scale-105 border border-emerald-400/40"

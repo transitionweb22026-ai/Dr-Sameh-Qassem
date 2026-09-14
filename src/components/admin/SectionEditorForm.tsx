@@ -29,10 +29,13 @@ export function SectionEditorForm({
   // them entirely (and always saves them as null).
   const hideTitleText = pageSlug === "home" && sectionKey === "about";
 
-  // About's "Featured Video" section gets a dedicated cover-image + video
-  // upload pair, same as video content items, instead of making the admin
-  // type "video_url" into the generic Extra fields editor.
-  const isFeaturedVideo = pageSlug === "about" && sectionKey === "videoSection";
+  // About's "Featured Video" section and the Home "About Preview" section
+  // (the video card right under the hero) both get a dedicated cover-image +
+  // video upload pair, same as video content items, instead of making the
+  // admin type "video_url" into the generic Extra fields editor.
+  const isFeaturedVideo =
+    (pageSlug === "about" && sectionKey === "videoSection") ||
+    (pageSlug === "home" && sectionKey === "about");
 
   // The shared FinalCta block at the bottom of every page is title + a
   // gold-highlighted portion + supporting text only — no image, no item

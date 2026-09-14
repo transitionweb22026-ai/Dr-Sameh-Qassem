@@ -6,15 +6,19 @@ import { useTranslations, useLocale } from "next-intl";
 import { X, Calendar, ArrowRight } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitch } from "./LanguageSwitch";
-import { navLinks, siteConfig } from "@/lib/site-config";
+import { navLinks } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 export function MobileDrawer({
   open,
   onClose,
+  phoneHref,
+  phoneDisplay,
 }: {
   open: boolean;
   onClose: () => void;
+  phoneHref: string;
+  phoneDisplay: string;
 }) {
   const t = useTranslations("nav");
   const locale = useLocale() as "ar" | "en";
@@ -107,11 +111,11 @@ export function MobileDrawer({
 
               <div className="p-6 border-t border-white/10 space-y-3 shrink-0">
                 <a
-                  href={siteConfig.phoneHref}
+                  href={phoneHref}
                   className="block text-center text-xs text-brand-100/70 font-medium"
                   dir="ltr"
                 >
-                  {siteConfig.phoneDisplay}
+                  {phoneDisplay}
                 </a>
                 <Link
                   href="/contact"

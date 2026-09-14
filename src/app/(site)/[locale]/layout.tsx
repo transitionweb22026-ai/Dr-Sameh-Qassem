@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { cairo, tajawal, playfair, inter } from "@/lib/fonts";
 import { siteConfig } from "@/lib/site-config";
+import { getSiteSettings } from "@/lib/controllers/siteSettings";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingActions } from "@/components/layout/FloatingActions";
@@ -60,6 +61,15 @@ export default async function LocaleLayout({
 
   const dir = locale === "ar" ? "rtl" : "ltr";
 
+  const settingsResult = await getSiteSettings();
+  const contact = settingsResult.ok
+    ? settingsResult.data
+    : {
+        phone_display: siteConfig.phoneDisplay,
+        phone_href: siteConfig.phoneHref,
+        whatsapp_number: siteConfig.whatsappNumber,
+      };
+
   return (
     <html
       lang={locale}
@@ -73,10 +83,10 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider>
           <VideoModalProvider>
-            <Navbar />
+            <Navbar phoneHref={contact.phone_href} phoneDisplay={contact.phone_display} />
             <main>{children}</main>
-            <Footer />
-            <FloatingActions />
+            <Footer phoneDisplay={contact.phone_display} />
+            <FloatingActions phoneHref={contact.phone_href} whatsappNumber={contact.whatsapp_number} />
           </VideoModalProvider>
         </NextIntlClientProvider>
       </body>

@@ -1,14 +1,17 @@
-"use client";
-
-import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { MapPin, Phone, Mail, Clock, Navigation, Siren } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { siteConfig, buildDirectionsLink } from "@/lib/site-config";
+import { getSiteSettings } from "@/lib/controllers/siteSettings";
 
-export function ClinicInfo() {
-  const t = useTranslations("contact.info");
-  const locale = useLocale() as "ar" | "en";
+export async function ClinicInfo({ locale }: { locale: "ar" | "en" }) {
+  const t = await getTranslations({ locale, namespace: "contact.info" });
   const clinic = siteConfig.clinics[0][locale];
+
+  const settingsResult = await getSiteSettings();
+  const contact = settingsResult.ok
+    ? settingsResult.data
+    : { phone_href: siteConfig.phoneHref, phone_display: siteConfig.phoneDisplay };
 
   return (
     <GlassCard hover={false} className="p-6 sm:p-7 space-y-5">
@@ -35,8 +38,8 @@ export function ClinicInfo() {
           <Phone className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
           <div>
             <div className="text-xs text-brand-700 font-semibold">{t("phoneLabel")}</div>
-            <a href={siteConfig.phoneHref} dir="ltr" className="font-bold text-brand-forest">
-              {siteConfig.phoneDisplay}
+            <a href={contact.phone_href} dir="ltr" className="font-bold text-brand-forest">
+              {contact.phone_display}
             </a>
           </div>
         </div>
@@ -59,7 +62,7 @@ export function ClinicInfo() {
 
         <div className="h-px bg-brand-900/10" />
 
-        <a href={siteConfig.phoneHref} className="flex items-center gap-3 group">
+        <a href={contact.phone_href} className="flex items-center gap-3 group">
           <div className="w-10 h-10 rounded-xl bg-red-500/15 text-red-500 flex items-center justify-center shrink-0">
             <Siren className="w-5 h-5" strokeWidth={1.8} />
           </div>

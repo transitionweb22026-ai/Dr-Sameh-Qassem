@@ -10,7 +10,13 @@ import { MobileDrawer } from "./MobileDrawer";
 import { navLinks, siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
-export function Navbar() {
+export function Navbar({
+  phoneHref,
+  phoneDisplay,
+}: {
+  phoneHref: string;
+  phoneDisplay: string;
+}) {
   const t = useTranslations("nav");
   const locale = useLocale() as "ar" | "en";
   const pathname = usePathname();
@@ -81,7 +87,7 @@ export function Navbar() {
         </div>
       </header>
 
-      <MobileDrawer open={open} onClose={closeDrawer} />
+      <MobileDrawer open={open} onClose={closeDrawer} phoneHref={phoneHref} phoneDisplay={phoneDisplay} />
     </>
   );
 }

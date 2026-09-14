@@ -7,6 +7,8 @@ import { listSectionsByPageId } from "@/lib/controllers/sections";
 import { listContentItemsBySection } from "@/lib/controllers/contentItems";
 import { pickLocale, sectionHeading, finalCtaProps } from "@/lib/cms-render";
 import type { ContentItem, PageHero, Section } from "@/lib/cms-types";
+import { siteConfig } from "@/lib/site-config";
+import { getSiteSettings } from "@/lib/controllers/siteSettings";
 import { GlobalHeroSection } from "@/components/layout/GlobalHeroSection";
 import { BookingForm } from "@/components/forms/BookingForm";
 import { ClinicInfo } from "@/components/sections/contact/ClinicInfo";
@@ -83,6 +85,9 @@ export default async function ContactPage({
     a: pickLocale(locale, item.text_en, item.text_ar),
   }));
 
+  const settingsResult = await getSiteSettings();
+  const whatsappNumber = settingsResult.ok ? settingsResult.data.whatsapp_number : siteConfig.whatsappNumber;
+
   return (
     <>
       <GlobalHeroSection
@@ -103,19 +108,19 @@ export default async function ContactPage({
         doctorImageAlt={hero ? pickLocale(locale, hero.title_en, hero.title_ar) : ""}
         bg3DElement={hero?.bg_3d_element ?? "skull"}
         bookingCard={{
-          title: common("bookingCard.title"),
-          text: common("bookingCard.text"),
-          cta: common("bookingCard.cta"),
+          title: (hero ? pickLocale(locale, hero.booking_card_title_en, hero.booking_card_title_ar) : "") || common("bookingCard.title"),
+          text: (hero ? pickLocale(locale, hero.booking_card_text_en, hero.booking_card_text_ar) : "") || common("bookingCard.text"),
+          cta: (hero ? pickLocale(locale, hero.booking_card_cta_en, hero.booking_card_cta_ar) : "") || common("bookingCard.cta"),
         }}
       />
       <section className="py-24 bg-brand-ivory relative" id="booking-form">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             <div className="h-full flex flex-col gap-6 justify-between">
-              <ClinicInfo />
+              <ClinicInfo locale={locale as "ar" | "en"} />
               <ClinicMap className="flex-1" />
             </div>
-            <BookingForm />
+            <BookingForm whatsappNumber={whatsappNumber} />
           </div>
         </div>
       </section>

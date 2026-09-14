@@ -9,7 +9,7 @@ import { siteConfig, buildWhatsAppLink } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function BookingForm() {
+export function BookingForm({ whatsappNumber }: { whatsappNumber: string }) {
   const t = useTranslations("contact.form");
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
@@ -52,7 +52,7 @@ export function BookingForm() {
       });
 
       setStatus("success");
-      window.open(buildWhatsAppLink(whatsappMessage), "_blank", "noopener,noreferrer");
+      window.open(buildWhatsAppLink(whatsappMessage, whatsappNumber), "_blank", "noopener,noreferrer");
       event.currentTarget.reset();
     } catch {
       setStatus("error");
