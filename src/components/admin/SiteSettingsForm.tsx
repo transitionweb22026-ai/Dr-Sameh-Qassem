@@ -5,14 +5,6 @@ import { useRouter } from "next/navigation";
 import { Loader2, Save } from "lucide-react";
 import { updateSiteSettings, type SiteSettings } from "@/lib/controllers/siteSettings";
 
-function digitsAndPlus(value: string): string {
-  return value.replace(/[^\d+]/g, "");
-}
-
-function digitsOnly(value: string): string {
-  return value.replace(/[^\d]/g, "");
-}
-
 export function SiteSettingsForm({ settings }: { settings: SiteSettings | null }) {
   const [phoneDisplay, setPhoneDisplay] = useState(settings?.phone_display ?? "");
   const [facebookUrl, setFacebookUrl] = useState(settings?.facebook_url ?? "");
@@ -28,8 +20,6 @@ export function SiteSettingsForm({ settings }: { settings: SiteSettings | null }
     setError(null);
     const result = await updateSiteSettings({
       phone_display: phoneDisplay,
-      phone_href: `tel:${digitsAndPlus(phoneDisplay)}`,
-      whatsapp_number: digitsOnly(phoneDisplay),
       facebook_url: facebookUrl || null,
       instagram_url: instagramUrl || null,
       tiktok_url: tiktokUrl || null,
@@ -60,8 +50,9 @@ export function SiteSettingsForm({ settings }: { settings: SiteSettings | null }
           />
         </label>
         <p className="mt-1.5 text-[11px] text-brand-700/60">
-          Used for the call button, the WhatsApp button, and everywhere the number is shown — one
-          number, full international format with the country code.
+          Used for the call button, the WhatsApp button, and everywhere the number is shown. You
+          can type it as a local Egyptian number (e.g. 01147886551) or with a country code — the
+          country code is added automatically for the call/WhatsApp links.
         </p>
       </div>
 
